@@ -1,0 +1,334 @@
+.root {
+    -fx-font: 14px Verdana;
+}
+
+
+#kreisI {
+
+    -fx-fill: #959595;
+}
+
+#circleLabelI, #circleLabelII {
+    -fx-background-radius: 50;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #000000, rgb(255, 95, 103));
+    -fx-text-fill: white;
+    -fx-pref-width: 100;
+    -fx-pref-height: 100;
+}
+
+
+.menu:hover {
+   -fx-background-color: #ffffff;
+}
+
+.menu-bar:focused {
+    -fx-background-color: #ffffff;
+}
+.menu-bar .label:hover {
+
+}
+
+.menu-item:focused {
+    -fx-background-color: #ffffff;
+}
+.menu-item {
+
+}
+
+.context-menu {
+    -fx-background-color: #ffffff;
+    -fx-border-insets: 5;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+}
+.context-menu .menu-item .label {
+    -fx-text-fill: #292929;
+}
+.context-menu .menu-item:hover  {
+    -fx-background-color: black;
+}
+
+.context-menu .menu-item:hover .label {
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item .label {
+    /*-fx-background-color: #ff2727;*/
+    -fx-border-style: none;
+    -fx-border-radius: 5px;
+}
+
+.menu-bar {
+
+}
+#vMenuBarLeftContainer {
+    -fx-background-color: #ffffff;
+}
+
+#vMenuBarLeftContainer .menu-bar {
+    -fx-background-color: #000000;
+    -fx-fit-to-width: true;
+}
+.menu-bar .label {
+    -fx-text-fill: rgba(201, 201, 201, 0.75);
+}
+
+#hMenuBarTop {
+    -fx-background-color: #ffffff;
+}
+
+#hMenuBarTop .label {
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+    -fx-padding: 5, 10, 5, 10;
+    -fx-font-size: 10px;
+    -fx-font-family: "Verdana UI Light";
+    -fx-text-fill: #000000;
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 100px;
+    -fx-alignment: center;
+
+}
+
+
+#hMenuBarTop .label:hover {
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-radius: 5;
+    -fx-padding: 3;
+
+}
+
+#hMenuBarTop .menu-item .label {
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0px;
+    -fx-padding: 5;
+    -fx-font-size: 10px;
+    -fx-font-family: "Verdana UI Light";
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #000000;
+    -fx-pref-width: 100px;
+    -fx-alignment: center;
+}
+#hMenuBarTop .menu-item:hover .label {
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-border-width: 3px;
+    -fx-padding: 3;
+    -fx-font-size: 10px;
+    -fx-font-family: "Verdana UI Light";
+    -fx-text-fill: #000000;
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 100px;
+    -fx-alignment: center;
+}
+
+
+.split-pane {
+    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ffffff, rgba(177, 155, 129, 0.43));*/
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #000000, rgb(41, 41, 41));
+}
+.split-pane *.split-pane-divider {
+    -fx-padding: 0;
+    -fx-opacity: 0.1;
+    visibility: false;
+
+}
+
+
+
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Verdana UI Semibold";
+    -fx-text-fill: #716f6c;
+}
+
+#titleLabel {
+    -fx-font-family: "Andale Mono";
+    -fx-label-padding: 10;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 1.5em;
+    -fx-font-weight: bold;
+}
+
+#infoLabel {
+    -fx-font-family: "Andale Mono";
+    -fx-label-padding: 10;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 1.5em;
+    -fx-font-weight: bold;
+}
+
+#titleLeftLabel {
+    -fx-font-family: "Andale Mono";
+    -fx-label-padding: 10;
+    -fx-text-fill: #708ca6;
+    -fx-font-size: 1em;
+    -fx-font-weight: 100;
+}
+
+.tool-bar {
+    -fx-alignment: center-right;
+    -fx-background-color: black;
+}
+
+#dateLabel {
+    -fx-font-family: "Andale Mono";
+    -fx-label-padding: 10;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 1em;
+    -fx-font-weight: 100;
+}
+
+.table-view {
+    -fx-font-size: 0.9em;
+    -fx-base: #000000;
+    -fx-control-inner-background: #ffffff;
+    -fx-background-color: #FFFFFF;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header {
+    -fx-size: 20;
+
+}
+.table-view .column-header .label {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Verdana UI Light";
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+#anwesenheitsAnteilSpalte {
+    -fx-alignment: center-right;
+}
+
+#anzTermineSpalte {
+    -fx-alignment: center-right;
+}
+
+#rangSpalte {
+    -fx-alignment: center-right;
+
+}
+#anzAnwesenheiten {
+    -fx-alignment: center-right;
+
+}
+#mitgliedSpalte {
+
+}
+.label {
+    -fx-font-family: "Andale Mono";
+    -fx-label-padding: 0;
+    -fx-text-fill: #708ca6;
+    -fx-font-size: 1em;
+    -fx-font-weight: 100;
+}
+
+.text-field {
+    -fx-background-radius: 0;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+
+}
+
+.text-field:focused{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.text-area {
+    -fx-border: none;
+    -fx-background-radius: 0;
+    text-area-background: #000000;
+    -fx-text-fill: white;
+}
+
+.text-area:focused {
+    -fx-border: none;
+    -fx-background-radius: 0;
+    text-area-background: #ffffff;
+    -fx-text-fill: black;
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+}
+
+#meldungAusgabeText {
+    -fx-border: none;
+    -fx-background-radius: 0;
+    text-area-background: #ffffff;
+    -fx-text-fill: #708ca6;
+
+}
+
+#meldungAusgabeText .content {
+    -fx-background-color: text-area-background ;
+}
+.combo-box {
+    -fx-background-radius: 0;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+
+}
+.combo-box .list-view .list-cell { /* Elemente der Combobox*/
+    -fx-text-fill: #000000;
+
+}
+.combo-box .list-cell { /* ausgewähltes Elemente der Combobox*/
+    -fx-text-fill: white;
+}
+
+.tab-pane {
+    -fx-background-color: #ffffff;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #000000;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #292929;
+    -fx-background-radius: 0;
+
+}
+.tab-pane .tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 0.8em;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #000000;
+
+}
+
+.button {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-font-family: "Verdana UI Light";
+    -fx-text-fill: black;
+}
+.button:hover {
+    -fx-background-color: #292929;
+    -fx-border-color: #292929;
+    -fx-font-family: "Verdana UI Light";
+    -fx-text-fill: #ffffff;
+}
+.check-box {
+
+
+
+}
