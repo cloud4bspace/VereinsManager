@@ -1,12 +1,17 @@
 package space.cloud4b.verein.view.mainframe;
 
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import space.cloud4b.verein.controller.AdressController;
+import space.cloud4b.verein.controller.KalenderController;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
+import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.view.browser.*;
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
@@ -23,11 +28,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
-public class MainFrameController {
+public class MainFrameController implements Observer {
 
     int anzMitglieder;
     int anzTermine;
     Mitglied mitglied = null;
+    AdressController adressController;
+    KalenderController kalenderController;
 
     // Reference to the main application
     private MainApp mainApp;
@@ -64,15 +71,20 @@ public class MainFrameController {
      * @param mainApp
      */
     public void setMainApp(MainApp mainApp) {
+        this.adressController = new AdressController();
+        this.adressController.Attach(this);
+        this.kalenderController = new KalenderController();
+        this.kalenderController.Attach(this);
         this.mainApp = mainApp;
         this.titleLabel.setText(mainApp.getVerein().getVereinsName()); // bei Initialize geht es nicht...
         this.dateLabel.setText(LocalDate.now().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
         this.anzMitglieder = mainApp.getVerein().getAdressBuch().getMitgliederListeAsArrayList().size();
         this.anzTermine = mainApp.getVerein().getKalender().getTerminListeAsArrayList().size();
         this.mitglied = mainApp.getVerein().getAdressBuch().getMitgliederListeAsArrayList().get(0);
-        circleLabelI.setText(this.anzMitglieder + " Mitglieder");
+        // circleLabelI.setText(this.anzMitglieder + " Mitglieder");
+        //circleLabelI.textProperty().bind(new SimpleStringProperty("hallo"));
         circleLabelI.setContentDisplay(ContentDisplay.CENTER);
-        circleLabelII.setText(this.anzTermine + " Termine");
+        //circleLabelII.setText(this.anzTermine + " Termine");
         circleLabelII.setContentDisplay(ContentDisplay.CENTER);
     }
 
@@ -112,30 +124,22 @@ public class MainFrameController {
 
         meldungAusgabeText.setWrapText(true);
         meldungAusgabeText.setText("Herzlich willkommen\n" + System.getProperty("user.name"));
-
-
-
     }
 
     /**
      * Opens an about dialog.
      */
     @FXML
-    private void handleInfo() {
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Vereins-App");
-        alert.setHeaderText("über..");
-        //System.getProperty("user.name");
-        alert.setContentText(System.getProperty("user.name") + "\nWebsite: https://cloud4b.space");
-        alert.showAndWait();
+    private void showInfo() {
+        mainApp.getMainController().showInfo();
     }
 
     @FXML
     private void handleRefresh() {
-        System.out.println( "Restarting app!" );
-        mainApp.getPrimaryStage().close();;
-        Platform.runLater( () -> mainApp.start( new Stage() ) );
+        System.out.println("Restarting app!");
+        mainApp.getPrimaryStage().close();
+        ;
+        Platform.runLater(() -> mainApp.start(new Stage()));
     }
 
     /**
@@ -143,13 +147,7 @@ public class MainFrameController {
      */
     @FXML
     private void handleHilfe() {
-        Stage stage = new Stage();
-        stage.setTitle("Web View");
-        Scene scene = new Scene(new Browser("https://www.cloud4b.space/VereinsManager/Hilfe/help.html"), 750, 500, Color.web("#666970"));
-        stage.setScene(scene);
-        scene.getStylesheets().add("../css/BrowserToolbar.css");
-        //TODO Path to stylesheet not correct...
-        stage.show();
+        mainApp.getMainController().showHilfe();
     }
 
     /**
@@ -178,7 +176,7 @@ public class MainFrameController {
 
     public void setInfo(String infoText, String infoTyp) {
         this.meldungAusgabeText.setText(infoText);
-        switch(infoTyp) {
+        switch (infoTyp) {
             case "OK":
                 this.meldungAusgabeText.setStyle("-fx-text-fill: #4FA67B");
                 break;
@@ -191,11 +189,30 @@ public class MainFrameController {
             default:
                 this.meldungAusgabeText.setStyle("-fx-text-fill: #708ca6");
                 break;
-
         }
-
-       // this.meldungAusgabeText.appendText(infoText);
-
     }
 
+    @Override
+    public void update(Object o) {
+        System.out.println("Update-Meldung erhalten");
+        if (o instanceof AdressController) {
+            AdressController ac = (AdressController) o;
+            int a = ((AdressController) o).getAnzahlMitglieder();
+            //circleLabelI.setText(a + " Mitglieder");
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() { circleLabelI.setText(a + " Mitglieder"); }
+            });
+        }
+
+        if (o instanceof KalenderController) {
+            KalenderController kc = (KalenderController) o;
+            int a = ((KalenderController) o).getAnzahlTermine();
+            //circleLabelI.setText(a + " Mitglieder");
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() { circleLabelII.setText(a + " Termine (" + LocalDate.now().getYear() + ")"); }
+            });
+        }
+    }
 }

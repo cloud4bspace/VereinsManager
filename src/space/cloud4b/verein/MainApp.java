@@ -9,6 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import space.cloud4b.verein.controller.MainController;
 import space.cloud4b.verein.einstellungen.Einstellung;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
@@ -25,6 +26,7 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane mainFrame;
     private MainFrameController mainFrameController;
+    private MainController mainController;
 
     public MainApp() {
 
@@ -36,6 +38,7 @@ public class MainApp extends Application {
         this.primaryStage.setTitle(verein.toString());
         this.primaryStage.getIcons().add(new Image("file:ressources/images/address_book_32.png"));
         this.primaryStage.setMaximized(true);
+        this.mainController = new MainController(this);
         initMainFrame();
         showDashboard();
     }
@@ -152,8 +155,11 @@ public class MainApp extends Application {
     public Verein getVerein() {
         return verein;
     }
+    public MainController getMainController() { return mainController; }
+    public MainFrameController getMainFrameController() {return mainFrameController; }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }

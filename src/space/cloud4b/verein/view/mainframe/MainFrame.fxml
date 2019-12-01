@@ -9,13 +9,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/StylesheetV01.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.cloud4b.verein.view.mainframe.MainFrameController">
+<BorderPane fx:id="dashBoard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/StylesheetV01.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.cloud4b.verein.view.mainframe.MainFrameController">
    <top>
       <VBox prefHeight="88.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <MenuBar fx:id="hMenuBarTop" prefHeight="36.0" VBox.vgrow="SOMETIMES">
               <menus>
-                <Menu fx:id="einstellungenMenu" mnemonicParsing="false" onAction="#handleInfo" text="Einstellungen" />
+                <Menu fx:id="einstellungenMenu" mnemonicParsing="false" onAction="#showInfo" text="Einstellungen" />
                 <Menu fx:id="helpMenu" mnemonicParsing="false" text="Hilfe">
                      <items>
                         <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleHilfe" text="online Hilfe" />
@@ -23,7 +23,7 @@
                      </items></Menu>
                   <Menu fx:id="infoMenu" mnemonicParsing="false" text="Vereinsmanager">
                      <items>
-                        <MenuItem fx:id="infoMenuItem" mnemonicParsing="false" onAction="#handleInfo" text="Info" />
+                        <MenuItem fx:id="infoMenuItem" mnemonicParsing="false" onAction="#showInfo" text="Info" />
                         <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#handleBeenden" text="beenden" />
                      </items></Menu>
                 <Menu fx:id="exitMenu" mnemonicParsing="false" onAction="#handleBeenden" />

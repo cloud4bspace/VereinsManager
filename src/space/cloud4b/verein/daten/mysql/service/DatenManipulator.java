@@ -1,13 +1,6 @@
 package space.cloud4b.verein.daten.mysql.service;
 
-import space.cloud4b.verein.daten.mysql.connection.MysqlConnection;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
-import space.cloud4b.verein.model.verein.status.Status;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 public abstract class DatenManipulator {
 

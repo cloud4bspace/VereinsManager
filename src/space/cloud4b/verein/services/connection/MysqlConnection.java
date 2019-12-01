@@ -1,4 +1,4 @@
-package space.cloud4b.verein.daten.mysql.connection;
+package space.cloud4b.verein.services.connection;
 
 import space.cloud4b.verein.einstellungen.Einstellung;
 

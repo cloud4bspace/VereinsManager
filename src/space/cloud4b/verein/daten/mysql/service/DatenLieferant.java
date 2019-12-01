@@ -1,8 +1,6 @@
 package space.cloud4b.verein.daten.mysql.service;
 
-import javafx.collections.ObservableList;
-import javafx.scene.chart.PieChart;
-import space.cloud4b.verein.daten.mysql.connection.MysqlConnection;
+import space.cloud4b.verein.services.connection.MysqlConnection;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.adressbuch.AdressBuch;
 import space.cloud4b.verein.model.verein.adressbuch.Kontakt;
@@ -10,7 +8,6 @@ import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.kalender.Jubilaeum;
 import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.model.verein.kontrolle.rangliste.Position;
-import space.cloud4b.verein.model.verein.kontrolle.rangliste.Rangliste;
 import space.cloud4b.verein.model.verein.status.Status;
 import space.cloud4b.verein.model.verein.status.StatusElement;
 
