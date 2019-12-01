@@ -53,7 +53,7 @@ public class KalenderController implements Subject  {
 
     @Override
     public void Dettach(Observer o) {
-
+        observerList.remove(o);
     }
 
     @Override

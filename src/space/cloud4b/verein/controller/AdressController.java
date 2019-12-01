@@ -1,8 +1,12 @@
 package space.cloud4b.verein.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.services.Subject;
+import space.cloud4b.verein.view.dashboard.DashBoardController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 
 import java.util.ArrayList;
@@ -10,6 +14,7 @@ import java.util.ArrayList;
 public class AdressController implements Subject {
 
     int anzahlMitglieder;
+    private DashBoardController dashBoardController;
     private ArrayList<Observer> observerList;
 
     public AdressController() {
@@ -17,7 +22,9 @@ public class AdressController implements Subject {
         observerList = new ArrayList<>();
         startTimerActor();
     }
-
+    public void setDashBoardController(DashBoardController dashBoardController) {
+        this.dashBoardController = dashBoardController;
+    }
 
     public void updateAnzahlMitglieder(int anzahlMitglieder) {
         this.anzahlMitglieder = anzahlMitglieder;
@@ -27,6 +34,9 @@ public class AdressController implements Subject {
 
     public int getAnzahlMitglieder() {
         return anzahlMitglieder;
+    }
+    public ObservableList<Mitglied> getMitgliederListe() {
+        return FXCollections.observableArrayList(DatabaseReader.getMitgliederAsArrayList());
     }
 
     private void startTimerActor() {

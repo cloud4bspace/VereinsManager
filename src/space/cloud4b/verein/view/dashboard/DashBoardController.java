@@ -1,26 +1,36 @@
 package space.cloud4b.verein.view.dashboard;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.GridPane;
 import space.cloud4b.verein.MainApp;
+import space.cloud4b.verein.controller.AdressController;
+import space.cloud4b.verein.controller.KalenderController;
+import space.cloud4b.verein.daten.mysql.service.DatenLieferant;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.kalender.Jubilaeum;
 import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.model.verein.kontrolle.rangliste.Position;
 import space.cloud4b.verein.model.verein.kontrolle.rangliste.Rangliste;
 import space.cloud4b.verein.model.verein.status.StatusElement;
+import space.cloud4b.verein.services.Observer;
+import space.cloud4b.verein.services.Subject;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.ArrayList;
 
-public class DashBoardController {
+public class DashBoardController implements Observer {
 
     private MainApp mainApp;
     private GridPane gridPane;
+    private ArrayList<Observer> observerList;
+    AdressController adressController;
+    KalenderController kalenderController;
 
     @FXML
     private TableView<Mitglied> mitgliederTabelle;
@@ -74,6 +84,10 @@ public class DashBoardController {
      */
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
+        this.adressController = new AdressController();
+        this.adressController.Attach(this);
+        this.kalenderController = new KalenderController();
+        this.kalenderController.Attach(this);
         // Add observable list data to the table
         mitgliederTabelle.setItems(this.mainApp.getVerein().getAdressBuch().getMitgliederListe());
         termineTabelle.setItems(this.mainApp.getVerein().getKalender().getNaechsteTerminListe());
@@ -128,6 +142,22 @@ public class DashBoardController {
                 cellData -> cellData.getValue().getAnzahlAnwesenheitenProperty());
         anwesenheitsAnteilSpalte.setCellValueFactory(
                 cellData -> cellData.getValue().getAnwesenheitsAnteilProperty());
+
+    }
+
+
+    @Override
+    public void update(Object o) {
+        System.out.println("Update-Meldung erhalten");
+        if (o instanceof AdressController) {
+            AdressController ac = (AdressController) o;
+            int a = ((AdressController) o).getAnzahlMitglieder();
+            //circleLabelI.setText(a + " Mitglieder");
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() { mitgliederTabelle.setItems(((AdressController) o).getMitgliederListe()); }
+            });
+        }
 
     }
 }
