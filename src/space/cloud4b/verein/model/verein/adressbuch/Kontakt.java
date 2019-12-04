@@ -3,6 +3,7 @@ package space.cloud4b.verein.model.verein.adressbuch;
 import javafx.beans.property.*;
 import space.cloud4b.verein.model.verein.status.StatusElement;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 public class Kontakt {
@@ -22,6 +23,8 @@ public class Kontakt {
     private String eMail;
     private String eMailII;
     private LocalDate austrittsDatum;
+    private String letzteAenderungUser;
+    private Timestamp letzteAenderungTimestamp;
 
     public Kontakt(int kontaktId, String nachName, String vorName) {
         this.kontaktId = kontaktId;
@@ -117,6 +120,19 @@ public class Kontakt {
     // Austrittsdatum
     public void setAustrittsDatum(LocalDate austrittsDatum) { this.austrittsDatum = austrittsDatum; }
     public LocalDate getAustrittsDatum() { return this.austrittsDatum; }
+
+    // letzte Änderung
+
+    public void setLetzteAenderungUser(String letzteAenderungUser) {
+        this.letzteAenderungUser = letzteAenderungUser;
+    }
+    public void setLetzteAenderungTimestamp(Timestamp letzteAenderungTimestamp) {
+        this.letzteAenderungTimestamp = letzteAenderungTimestamp;
+    }
+
+    public String getLetzteAenderung() {
+        return "letzte Änderung: " + letzteAenderungTimestamp + " (" + letzteAenderungUser + ")";
+    }
 }
 
 

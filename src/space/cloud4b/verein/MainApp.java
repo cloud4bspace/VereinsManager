@@ -13,6 +13,7 @@ import space.cloud4b.verein.controller.MainController;
 import space.cloud4b.verein.einstellungen.Einstellung;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
+import space.cloud4b.verein.services.DatabaseOperation;
 import space.cloud4b.verein.view.chart.BirthdayStatisticsController;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
@@ -29,8 +30,10 @@ public class MainApp extends Application {
     private MainController mainController;
 
     public MainApp() {
-
+       // DatabaseOperation.createDatabaseFromTemplate();
+        // TODO Restore Database from Template
         verein = new Verein(Einstellung.getVereinsName());
+
     }
     @Override
     public void start(Stage primaryStage) {
@@ -106,9 +109,10 @@ public class MainApp extends Application {
             dialogStage.setScene(scene);
             mainFrame.setCenter(page);
             MitgliedViewController controller = loader.getController();
-            controller.setMitglied(this.getVerein().getAdressBuch().getMitgliederListeAsArrayList().get(0));
             controller.setMainApp(this);
             controller.setMainFrameController(mainFrameController);
+            controller.setMitglied(this.getVerein().getAdressBuch().getMitgliederListeAsArrayList().get(0));
+
 
 
         } catch (IOException e) {

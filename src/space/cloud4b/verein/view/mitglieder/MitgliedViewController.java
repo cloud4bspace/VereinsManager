@@ -1,5 +1,6 @@
 package space.cloud4b.verein.view.mitglieder;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -8,10 +9,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import space.cloud4b.verein.MainApp;
+import space.cloud4b.verein.controller.AdressController;
+import space.cloud4b.verein.controller.KalenderController;
 import space.cloud4b.verein.daten.mysql.service.DatenManipulator;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.status.Status;
 import space.cloud4b.verein.model.verein.status.StatusElement;
+import space.cloud4b.verein.services.DatabaseOperation;
+import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -22,16 +27,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
-public class MitgliedViewController {
+public class MitgliedViewController implements Observer {
+
+    private ArrayList<Observer> observerList;
+    AdressController adressController;
 
     @FXML
     public ComboBox<StatusElement> comboBoxAnrede = new ComboBox<StatusElement>();
+    @FXML
+    public ComboBox<StatusElement> comboBoxKategorieI = new ComboBox<StatusElement>();
+    @FXML
+    public ComboBox<StatusElement> comboBoxKategorieII = new ComboBox<StatusElement>();
     @FXML
     private TableView<Mitglied> mitgliedTabelle;
     @FXML
@@ -42,6 +56,8 @@ public class MitgliedViewController {
     private TableColumn<Mitglied, String> nachnameSpalte;
     @FXML
     private Label idLabel;
+    @FXML
+    private Label letzteAenderungLabel;
     @FXML
     private TextField nachNameFeld;
     @FXML
@@ -71,11 +87,13 @@ public class MitgliedViewController {
     @FXML
     private DatePicker eintrittsDatumPicker;
     @FXML
+    private DatePicker austrittsDatumPicker;
+    @FXML
     private Label mitgliedSeitLabel;
     @FXML
-    private DatePicker austrittsDatum;
-    @FXML
     private ImageView profilBild;
+    @FXML
+    private CheckBox istVorstandsmitgliedCheckBox;
     @FXML
     private Button nextMitgliedButton;
 
@@ -88,7 +106,7 @@ public class MitgliedViewController {
     private ArrayList<Mitglied> mitgliedArrayList;
 
     public MitgliedViewController() {
-        //this.firstMitglied = mainApp.getVerein().getAdressBuch().getMitgliederListeAsArrayList().get(0);
+        //this.aktuellesMitglied = mainApp.getVerein().getAdressBuch().getMitgliederListeAsArrayList().get(0);
     }
 
     /**
@@ -109,6 +127,10 @@ public class MitgliedViewController {
 
         Status anrede = new Status(1);
         comboBoxAnrede.getItems().addAll(anrede.getElementsAsArrayList());
+        Status kategorieI = new Status(2);
+        comboBoxKategorieI.getItems().addAll(kategorieI.getElementsAsArrayList());
+        Status kategorieII = new Status(4);
+        comboBoxKategorieII.getItems().addAll(kategorieII.getElementsAsArrayList());
     }
 
     public boolean isOkClicked() {
@@ -144,9 +166,13 @@ public class MitgliedViewController {
      * @param mitglied
      */
     public void setMitglied(Mitglied mitglied) {
+        if(mitglied == null){
+            mitglied = mitgliedArrayList.get(0);
+        }
         this.aktuellesMitglied = mitglied;
-        comboBoxAnrede.getSelectionModel().select(mitglied.getAnredeElement().getStatusElementKey());
         idLabel.setText(("Details zu Mitglied #" + mitglied.getId()));
+        letzteAenderungLabel.setText(mitglied.getLetzteAenderung());
+        comboBoxAnrede.getSelectionModel().select(mitglied.getAnredeElement().getStatusElementKey());
         nachNameFeld.setText(mitglied.getNachName());
         vorNameFeld.setText(mitglied.getVorname());
         adresseFeld.setText(mitglied.getAdresse());
@@ -158,7 +184,14 @@ public class MitgliedViewController {
         telefonFeld.setText(mitglied.getTelefon());
         eMailFeld.setText(mitglied.getEmail());
         eMailIIFeld.setText(mitglied.getEmailII());
-
+        geburtsdatumPicker.setValue(mitglied.getGeburtsdatum());
+        alterLabel.setText("Geburtsdatum (" + Period.between(mitglied.getGeburtsdatum(), LocalDate.now()).getYears() + ")");
+        mitgliedSeitLabel.setText("Eintritt (" + Period.between(mitglied.getEintrittsdatum(), LocalDate.now()).getYears() + ")");
+        eintrittsDatumPicker.setValue(mitglied.getEintrittsdatum());
+        austrittsDatumPicker.setValue(mitglied.getAustrittsDatum());
+        comboBoxKategorieI.getSelectionModel().select(mitglied.getKategorieIElement().getStatusElementKey());
+        comboBoxKategorieII.getSelectionModel().select(mitglied.getKategorieIIElement().getStatusElementKey());
+        istVorstandsmitgliedCheckBox.setSelected(mitglied.getIstVorstandsmitglied().getValue());
         // nur jpg und png sind erlaubt...
         // TODO Image löschen, wenn es keines gibt.
         try {
@@ -183,11 +216,7 @@ public class MitgliedViewController {
             }
         }
 
-        geburtsdatumPicker.setValue(mitglied.getGeburtsdatum());
-        alterLabel.setText("Geburtsdatum (" + Period.between(mitglied.getGeburtsdatum(), LocalDate.now()).getYears() + ")");
 
-        mitgliedSeitLabel.setText("Eintritt (" + Period.between(mitglied.getEintrittsdatum(), LocalDate.now()).getYears() + ")");
-        eintrittsDatumPicker.setValue(mitglied.getEintrittsdatum());
     }
 
     public void handelProfilbildButton() {
@@ -235,9 +264,14 @@ public class MitgliedViewController {
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
+        this.adressController = new AdressController(this);
+        this.adressController.Attach(this);
         mitgliedTabelle.setItems(this.mainApp.getVerein().getAdressBuch().getMitgliederListe());
         mitgliedTabelle.getSelectionModel().selectFirst();
-        mitgliedArrayList = new ArrayList<>(this.mainApp.getVerein().getAdressBuch().getMitgliederListeAsArrayList());
+       // mitgliedArrayList = new ArrayList<>(this.mainApp.getVerein().getAdressBuch().getMitgliederListeAsArrayList());
+        mitgliedArrayList = new ArrayList<>(this.adressController.getMitgliederListe());
+
+        aktuellesMitglied = mitgliedArrayList.get(0);
 
     }
     public void handleResetButton() {
@@ -268,13 +302,28 @@ public class MitgliedViewController {
         if (isInputValid()) {
             aktuellesMitglied.setNachName(nachNameFeld.getText());
             aktuellesMitglied.setVorName(vorNameFeld.getText());
+            aktuellesMitglied.setAdresse(adresseFeld.getText());
+            aktuellesMitglied.setAdresszusatz(adressZusatzFeld.getText());
+            aktuellesMitglied.setPlz(Integer.parseInt(plzFeld.getText()));
+            aktuellesMitglied.setOrt(ortFeld.getText());
+            aktuellesMitglied.setGeburtsdatum(geburtsdatumPicker.getValue());
+            aktuellesMitglied.setAnredeStatus(comboBoxAnrede.getValue());
+            aktuellesMitglied.setMobile(mobileFeld.getText());
+            aktuellesMitglied.setTelefon(telefonFeld.getText());
+            aktuellesMitglied.setEmail(eMailFeld.getText());
+            aktuellesMitglied.setEmailII(eMailIIFeld.getText());
+            aktuellesMitglied.setBemerkungen(bemerkungsFeld.getText());
+            aktuellesMitglied.setEintrittsDatum(eintrittsDatumPicker.getValue());
+            aktuellesMitglied.setAustrittsDatum(austrittsDatumPicker.getValue());
+            aktuellesMitglied.setKategorieIStatus(comboBoxKategorieI.getValue());
+            aktuellesMitglied.setKategorieIIStatus(comboBoxKategorieII.getValue());
+            aktuellesMitglied.setIstVorstandsmitglied(istVorstandsmitgliedCheckBox.isSelected());
+            aktuellesMitglied.setLetzteAenderungTimestamp(Timestamp.valueOf(LocalDateTime.now()));
 
-            //setMitglied(aktuellesMitglied);
-
-
+            setMitglied(aktuellesMitglied);
 
             // an SQL-Tabelle weitergeben
-            DatenManipulator.updateMitglied(aktuellesMitglied);
+            DatabaseOperation.updateMitglied(aktuellesMitglied);
 
             mainFrameController.setInfo("Änderungen gespeichert!", "OK");
 
@@ -303,8 +352,30 @@ public class MitgliedViewController {
             errorMeldung += "Vorname ist ungültig!\n";
             isValid = false;
         }
+        if (plzFeld.getText() == null || plzFeld.getText().length() == 0) {
+            errorMeldung += "Ungültige PLZ!\n";
+        } else {
+            // try to parse the postal code into an int.
+            try {
+                Integer.parseInt(plzFeld.getText());
+            } catch (NumberFormatException e) {
+                errorMeldung += "PLZ muss eine Zahl sein!\n";
+            }
+        }
 
         mainFrameController.setInfo(errorMeldung, "NOK");
         return isValid;
+    }
+
+    @Override
+    public void update(Object o) {
+        System.out.println("Update-Meldung erhalten");
+        if (o instanceof AdressController) {
+            AdressController ac = (AdressController) o;
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() { mitgliedTabelle.setItems(((AdressController) o).getMitgliederListe()); }
+            });
+        }
     }
 }

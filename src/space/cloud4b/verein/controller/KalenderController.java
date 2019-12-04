@@ -1,5 +1,8 @@
 package space.cloud4b.verein.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.services.Subject;
@@ -25,6 +28,9 @@ public class KalenderController implements Subject  {
 
     public int getAnzahlTermine() {
         return anzahlTermine;
+    }
+    public ObservableList<Termin> getNaechsteTerminListe() {
+        return FXCollections.observableArrayList(DatabaseReader.getKommendeTermineAsArrayList());
     }
 
     private void startTimerActor() {

@@ -90,7 +90,7 @@ public class DashBoardController implements Observer {
         this.kalenderController.Attach(this);
         // Add observable list data to the table
         mitgliederTabelle.setItems(this.mainApp.getVerein().getAdressBuch().getMitgliederListe());
-        termineTabelle.setItems(this.mainApp.getVerein().getKalender().getNaechsteTerminListe());
+       termineTabelle.setItems(this.mainApp.getVerein().getKalender().getNaechsteTerminListe());
         jubilaeumTabelle.setItems(this.mainApp.getVerein().getKalender().getJubilaeumsListe());
         ranglisteTabelle.setItems(this.mainApp.getVerein().getRangliste().getRanglistenListe());
     }
@@ -151,11 +151,20 @@ public class DashBoardController implements Observer {
         System.out.println("Update-Meldung erhalten");
         if (o instanceof AdressController) {
             AdressController ac = (AdressController) o;
-            int a = ((AdressController) o).getAnzahlMitglieder();
-            //circleLabelI.setText(a + " Mitglieder");
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() { mitgliederTabelle.setItems(((AdressController) o).getMitgliederListe()); }
+            });
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() { jubilaeumTabelle.setItems(((AdressController) o).getJubilaeumsListe()); }
+            });
+        }
+        if (o instanceof KalenderController) {
+            KalenderController kc = (KalenderController) o;
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() { termineTabelle.setItems(((KalenderController) o).getNaechsteTerminListe()); }
             });
         }
 

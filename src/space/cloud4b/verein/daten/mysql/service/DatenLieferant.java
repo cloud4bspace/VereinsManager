@@ -71,6 +71,8 @@ public abstract class DatenLieferant {
 
     public static ArrayList<Mitglied> mitgliederLaden(AdressBuch adressBuch) {
         Status anredeStatus = adressBuch.getAnredeStatus();
+        Status kategorieIStatus = adressBuch.getKategorieIStatus();
+        Status kategorieIIStatus = adressBuch.getKategorieIIStatus();
         ArrayList<Mitglied> mitgliederListe = new ArrayList<>();
         ArrayList<Kontakt> kontaktListe = new ArrayList<>();
         LocalDate heute = LocalDate.now();
@@ -147,7 +149,8 @@ public abstract class DatenLieferant {
                     }
 
                     ((Mitglied) kontakt).setEintrittsDatum(kontaktEintrittsdatum);
-
+                    ((Mitglied) kontakt).setKategorieIStatus(kategorieIStatus.getStatusElemente().get(rs.getInt("KontaktKategorieA")));
+                    ((Mitglied) kontakt).setKategorieIIStatus(kategorieIIStatus.getStatusElemente().get(rs.getInt("KontaktKategorieB")));
                 }
                 System.out.println("Objekt wurde vervollständigt: " + kontakt.toString() + "/" + kontakt.getClass());
 
@@ -173,7 +176,7 @@ public abstract class DatenLieferant {
     public static ArrayList<Termin> termineLaden(){
         ArrayList<Termin> terminListe = new ArrayList<>();
         try (Connection conn = new MysqlConnection().getConnection(); Statement st = conn.createStatement()) {
-            String query = "SELECT * from termin ORDER BY TerminDatum ASC";
+            String query = "SELECT * from usr_web116_5.termin ORDER BY TerminDatum ASC";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {

@@ -120,12 +120,12 @@
    <right>
       <VBox prefHeight="465.0" prefWidth="120.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="circleLabelI" alignment="CENTER" text="Label" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="circleLabelI" alignment="CENTER" text="..." textAlignment="CENTER" wrapText="true">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="circleLabelII" alignment="CENTER" text="Label" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="circleLabelII" alignment="CENTER" text="..." textAlignment="CENTER" wrapText="true">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin></Label>

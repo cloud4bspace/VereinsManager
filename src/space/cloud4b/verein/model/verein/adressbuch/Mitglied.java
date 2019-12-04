@@ -1,6 +1,8 @@
 package space.cloud4b.verein.model.verein.adressbuch;
 
+import javafx.beans.property.*;
 import space.cloud4b.verein.model.verein.kalender.Termin;
+import space.cloud4b.verein.model.verein.status.StatusElement;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,6 +12,9 @@ public class Mitglied extends  Kontakt {
 
     private LocalDate eintrittsDatum;
     private LocalDate austrittsDatum;
+    private StatusElement kategorieIStatus;
+    private StatusElement kategorieIIStatus;
+    private boolean istVorstandsmitglied;
 
     public Mitglied(int kontaktId, String nachName, String vorName) {
 
@@ -35,4 +40,26 @@ public class Mitglied extends  Kontakt {
         return super.getKurzbezeichnung();
         //TODO evtl. erweitern mit Mitglied-Typ
     }
+
+    // Kategorie I
+    public ObjectProperty<StatusElement> getKategorieIElementProperty() { return new SimpleObjectProperty<StatusElement>(kategorieIStatus); }
+    public void setKategorieIStatus(StatusElement kategorieIStatus) {this.kategorieIStatus = kategorieIStatus; }
+    public StatusElement getKategorieIElement() {
+        return kategorieIStatus;
+    }
+    public ObjectProperty<StatusElement> getKategorieIProperty() { return new SimpleObjectProperty<StatusElement>(this.kategorieIStatus); }
+
+    // Kategorie II
+    public ObjectProperty<StatusElement> getKategorieIIElementProperty() { return new SimpleObjectProperty<StatusElement>(kategorieIIStatus); }
+    public void setKategorieIIStatus(StatusElement kategorieIIStatus) {this.kategorieIIStatus = kategorieIIStatus; }
+    public StatusElement getKategorieIIElement() {
+        return kategorieIIStatus;
+    }
+    public ObjectProperty<StatusElement> getKategorieIIProperty() { return new SimpleObjectProperty<StatusElement>(this.kategorieIIStatus); }
+
+    // Vorstandsmitglied
+    public void setIstVorstandsmitglied(boolean istVorstandsmitglied) {
+        this.istVorstandsmitglied = istVorstandsmitglied;
+    }
+    public BooleanProperty getIstVorstandsmitglied() { return new SimpleBooleanProperty(istVorstandsmitglied);}
 }

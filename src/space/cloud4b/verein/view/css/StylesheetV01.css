@@ -170,6 +170,10 @@
     -fx-font-weight: 100;
 }
 
+#letzteAenderungLabel {
+    -fx-text-fill: #708ca6;
+    -fx-font-size: 0.8em;
+}
 .tool-bar {
     -fx-alignment: center-right;
     -fx-background-color: black;
