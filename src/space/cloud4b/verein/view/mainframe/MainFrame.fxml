@@ -71,7 +71,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Termine">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleTerminbereich" text="Termine verwalten" />
                   </items>
                 </Menu>
               </menus>

@@ -60,7 +60,7 @@ public abstract class DatabaseOperation {
      * @param mitglied das geänderte und zu aktualisierende Mitlied
      */
     public static void updateMitglied(Mitglied mitglied) {
-        // writeLog(contact);
+        LogWriter.writeMitgliedUpdateLog(mitglied);
         MysqlConnection conn = new MysqlConnection();
         boolean istMitglied = false;
 

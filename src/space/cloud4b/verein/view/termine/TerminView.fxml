@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.cloud4b.verein.view.mitglieder.MitgliedViewController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.cloud4b.verein.view.termine.TerminViewController">
    <children>
       <BorderPane layoutX="93.0" layoutY="186.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/StylesheetV01.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -16,12 +17,12 @@
                <children>
                   <VBox layoutX="-1.0" layoutY="46.0" prefHeight="400.0" prefWidth="307.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label fx:id="idLabel" text="Label">
+                        <Label text="Label">
                            <VBox.margin>
                               <Insets left="10.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label fx:id="letzteAenderungLabel" text="Label">
+                        <Label text="Label">
                            <VBox.margin>
                               <Insets left="10.0" top="5.0" />
                            </VBox.margin>
@@ -42,44 +43,63 @@
                                           <RowConstraints maxHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                                           <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <Label prefHeight="15.0" prefWidth="104.0" text="Nachname" GridPane.rowIndex="1" />
-                                          <Label text="Vorname" GridPane.rowIndex="2" />
+                                          <Label prefHeight="15.0" prefWidth="104.0" text="Termin Text" GridPane.rowIndex="1" />
+                                          <Label text="Zeit von/am" GridPane.rowIndex="2" />
                                           <Label text="Strasse" GridPane.rowIndex="3" />
                                           <Label text="Adresszusatz" GridPane.rowIndex="4" />
                                           <Label text="PLZ" GridPane.rowIndex="5" />
                                           <Label text="Ort" GridPane.rowIndex="6" />
-                                          <TextField fx:id="vorNameFeld" onInputMethodTextChanged="#onValueChanged" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                          <TextField fx:id="adresseFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                          <TextField fx:id="adressZusatzFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                          <TextField fx:id="nachNameFeld" onAction="#onValueChanged" onInputMethodTextChanged="#onValueChanged" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <Label text="Anrede" />
-                                          <ComboBox fx:id="comboBoxAnrede" onAction="#onValueChanged" onMouseReleased="#onValueChanged" prefHeight="27.0" prefWidth="177.0" GridPane.columnIndex="1" />
-                                          <Label fx:id="alterLabel" text="Geburtstag" GridPane.rowIndex="7" />
-                                          <DatePicker fx:id="geburtsdatumPicker" onKeyTyped="#onValueChanged" onMouseReleased="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                          <TextField fx:id="plzFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                          <TextField fx:id="ortFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label text="Termindatum" />
+                                          <Label text="Geburtstag" GridPane.rowIndex="7" />
+                                          <DatePicker showWeekNumbers="true" GridPane.columnIndex="1" />
                                           <Label text="Profilbild" GridPane.rowIndex="8" />
                                           <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
                                              <children>
-                                                <ImageView fx:id="profilBild" fitHeight="90.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8">
-                                                   <GridPane.margin>
-                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                   </GridPane.margin>
-                                                </ImageView>
-                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handelProfilbildButton" text="Bild ändern/hinzufügen" textAlignment="CENTER">
+                                                <ProgressIndicator prefHeight="100.0" prefWidth="67.0" progress="0.0" />
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Bild ändern/hinzufügen" textAlignment="CENTER">
                                                    <HBox.margin>
                                                       <Insets left="20.0" />
                                                    </HBox.margin>
                                                 </Button>
                                              </children>
                                           </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <VBox prefHeight="70.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <children>
+                                                <HBox prefHeight="44.0" prefWidth="400.0">
+                                                   <children>
+                                                      <Slider fx:id="stundenSlider" blockIncrement="1.0" majorTickUnit="12.0" max="23.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Slider>
+                                                      <Slider fx:id="minutenSlider" blockIncrement="5.0" majorTickUnit="15.0" max="59.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" value="30.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="32.0" prefWidth="400.0">
+                                                   <children>
+                                                      <TextField fx:id="stundenFeld" alignment="CENTER_RIGHT" prefWidth="50.0" />
+                                                      <TextField fx:id="minutenFeld" alignment="CENTER_RIGHT" prefWidth="50.0">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <TextField prefHeight="27.0" prefWidth="33.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                        </children>
                                        <padding>
                                           <Insets left="10.0" right="10.0" top="10.0" />
@@ -104,12 +124,12 @@
                                       </rowConstraints>
                                        <children>
                                           <Label text="Mobile" />
-                                          <TextField fx:id="mobileFeld" GridPane.columnIndex="1" />
-                                          <TextField fx:id="telefonFeld" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                           <Label text="Telefon II" GridPane.rowIndex="1" />
                                           <Label text="E-Mail" GridPane.rowIndex="2" />
-                                          <TextField fx:id="eMailFeld" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                          <TextField fx:id="eMailIIFeld" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                           <Label text="E-Mail II" GridPane.rowIndex="3" />
                                           <Label text="Bemerkungen" GridPane.rowIndex="4" />
                                           <TextArea fx:id="bemerkungsFeld" prefHeight="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -119,46 +139,6 @@
                                        </padding>
                                     </GridPane>
                                  </content>
-                              </Tab>
-                              <Tab closable="false" text="Mitglieder-Infos">
-                                 <content>
-                                    <GridPane hgap="5.0" vgap="5.0">
-                                      <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                      </columnConstraints>
-                                      <rowConstraints>
-                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                      </rowConstraints>
-                                       <children>
-                                          <Label fx:id="mitgliedSeitLabel" text="Label">
-                                             <tooltip>
-                                                <Tooltip text="in Klammer: Anzahl Mitgliedjahre" />
-                                             </tooltip></Label>
-                                          <Label text="Austrittsdatum" GridPane.rowIndex="1" />
-                                          <Label text="Kategorie I" GridPane.rowIndex="2" />
-                                          <DatePicker fx:id="eintrittsDatumPicker" GridPane.columnIndex="1" />
-                                          <DatePicker fx:id="austrittsDatumPicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <Label text="Kategorie II" GridPane.rowIndex="3" />
-                                          <Label text="Vorstandsmitglied" GridPane.rowIndex="4" />
-                                          <ComboBox fx:id="comboBoxKategorieI" prefHeight="27.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                          <ComboBox fx:id="comboBoxKategorieII" prefHeight="27.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                          <CheckBox fx:id="istVorstandsmitgliedCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                       </children>
-                                       <padding>
-                                          <Insets left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                    </GridPane>
-                                 </content>
-                              </Tab>
-                              <Tab disable="true" text="Zugangsdaten">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                </content>
                               </Tab>
                            </tabs>
                            <VBox.margin>
@@ -170,15 +150,15 @@
                         </TabPane>
                         <HBox alignment="TOP_RIGHT" prefHeight="74.0" prefWidth="707.0" spacing="10.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#handleLoeschenButton" text="Löschen" />
-                              <Button mnemonicParsing="false" onAction="#handleResetButton" text="Reset" />
-                              <Button mnemonicParsing="false" onAction="#handleSpeichernButton" text="Speichern">
+                              <Button mnemonicParsing="false" text="Löschen" />
+                              <Button mnemonicParsing="false" text="Reset" />
+                              <Button mnemonicParsing="false" text="Speichern">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Button>
                               <Button mnemonicParsing="false" text="&lt;&lt;" />
-                              <Button fx:id="nextMitgliedButton" mnemonicParsing="false" onAction="#handleGetNextMitglied" text="&gt;&gt;" />
+                              <Button fx:id="nextMitgliedButton" mnemonicParsing="false" text="&gt;&gt;" />
                            </children>
                            <VBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

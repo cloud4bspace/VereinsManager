@@ -253,6 +253,7 @@
     -fx-background-radius: 0;
     text-area-background: #000000;
     -fx-text-fill: white;
+
 }
 
 .text-area:focused {
@@ -271,6 +272,7 @@
     -fx-background-radius: 0;
     text-area-background: #ffffff;
     -fx-text-fill: #708ca6;
+    -fx-font-size: 0.8em;
 
 }
 
@@ -335,4 +337,15 @@
 
 
 
+}
+.slider .thumb {
+    -fx-background-color: black;
+    -fx-background-radius:50px;
+    -fx-border-color: white;
+    -fx-border-width: 5px;
+    -fx-border-radius: 50px;
+}
+
+.slider .track {
+    -fx-background-color: black;
 }

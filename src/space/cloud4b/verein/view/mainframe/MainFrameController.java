@@ -25,6 +25,7 @@ import space.cloud4b.verein.model.verein.Verein;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
@@ -167,6 +168,13 @@ public class MainFrameController implements Observer {
     }
 
     /**
+     * Oeffnet das Fenster des Terminbereichs
+     */
+    @FXML
+    private void handleTerminbereich() {
+        mainApp.showTerminEditDialog();
+    }
+    /**
      * Closes the application.
      */
     @FXML
@@ -176,6 +184,30 @@ public class MainFrameController implements Observer {
 
     public void setInfo(String infoText, String infoTyp) {
         this.meldungAusgabeText.setText(infoText);
+        switch (infoTyp) {
+            case "OK":
+                this.meldungAusgabeText.setStyle("-fx-text-fill: #4FA67B");
+                break;
+            case "NOK":
+                this.meldungAusgabeText.setStyle("-fx-text-fill: #FF5F67");
+                break;
+            case "Info":
+                this.meldungAusgabeText.setStyle("-fx-text-fill: #708ca6");
+                break;
+            default:
+                this.meldungAusgabeText.setStyle("-fx-text-fill: #708ca6");
+                break;
+        }
+    }
+
+    public void setInfo(String infoText, String infoTyp, boolean add) {
+        if(add == true){
+            this.meldungAusgabeText.setText("*** " +LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")) + " ***\n" + infoText + "\n\n" + this.meldungAusgabeText.getText());
+       // this.meldungAusgabeText.appendText("\n" + LocalTime.now() + " - " + infoText);
+       // this.meldungAusgabeText.insertText(LocalTime.now() + " - " + infoText);
+        } else {
+            this.meldungAusgabeText.setText(infoText);
+        }
         switch (infoTyp) {
             case "OK":
                 this.meldungAusgabeText.setStyle("-fx-text-fill: #4FA67B");

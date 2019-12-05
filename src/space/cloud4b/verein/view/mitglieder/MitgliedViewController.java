@@ -39,6 +39,7 @@ public class MitgliedViewController implements Observer {
 
     private ArrayList<Observer> observerList;
     AdressController adressController;
+    boolean unsavedChanges = false;
 
     @FXML
     public ComboBox<StatusElement> comboBoxAnrede = new ComboBox<StatusElement>();
@@ -152,7 +153,7 @@ public class MitgliedViewController implements Observer {
             setMitglied(mitgliedArrayList.get(i));
 
         } else {
-            mainFrameController.setInfo("Blättern nicht möglich..", "NOK");
+            mainFrameController.setInfo("Blättern nicht möglich..", "NOK", true);
         }
     }
 
@@ -166,6 +167,20 @@ public class MitgliedViewController implements Observer {
      * @param mitglied
      */
     public void setMitglied(Mitglied mitglied) {
+        if(unsavedChanges== true) {
+            // Show the error message.
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.initOwner(dialogStage);
+            alert.setTitle("ungespeicherte Änderungen");
+            alert.setHeaderText("ungespeicherte Aenderungen missachten?");
+            alert.setContentText("bei\n\n" + aktuellesMitglied + "\n\nmit OK bestätigen oder abbrechen");
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if(result.get() != ButtonType.OK) {
+                return;
+            }
+        }
         if(mitglied == null){
             mitglied = mitgliedArrayList.get(0);
         }
@@ -295,11 +310,23 @@ public class MitgliedViewController implements Observer {
             // TODO Löschung an MYSQL weitergeben
         }
     }
+
+    /**
+     * Wird aufgerufen, wenn der Inhalt eines Eingabefelds verändert wird und ein Speichern
+     * notwendig wird.
+     */
+    public void onValueChanged() {
+        if(!unsavedChanges) {
+            unsavedChanges = true;
+            mainFrameController.setInfo("Änderungen wurden noch nicht gespeichert!", "INFO", true);
+        }
+    }
     /**
      * überprüft die Daten und speichert sie
      */
     public void handleSpeichernButton() {
         if (isInputValid()) {
+            unsavedChanges = false;
             aktuellesMitglied.setNachName(nachNameFeld.getText());
             aktuellesMitglied.setVorName(vorNameFeld.getText());
             aktuellesMitglied.setAdresse(adresseFeld.getText());
@@ -325,7 +352,7 @@ public class MitgliedViewController implements Observer {
             // an SQL-Tabelle weitergeben
             DatabaseOperation.updateMitglied(aktuellesMitglied);
 
-            mainFrameController.setInfo("Änderungen gespeichert!", "OK");
+            mainFrameController.setInfo("Änderungen gespeichert!", "OK", true);
 
             // Tabelle aktualisieren
             mitgliedTabelle.refresh();
@@ -345,25 +372,25 @@ public class MitgliedViewController implements Observer {
         Boolean isValid = true;
 
         if (nachNameFeld.getText() == null || nachNameFeld.getText().length() == 0) {
-            errorMeldung += "Nachname ist ungültig!\n";
+            errorMeldung += "Nachname ist ungültig!";
             isValid = false;
         }
         if (vorNameFeld.getText() == null || vorNameFeld.getText().length() == 0) {
-            errorMeldung += "Vorname ist ungültig!\n";
+            errorMeldung += "Vorname ist ungültig!";
             isValid = false;
         }
         if (plzFeld.getText() == null || plzFeld.getText().length() == 0) {
-            errorMeldung += "Ungültige PLZ!\n";
+            errorMeldung += "Ungültige PLZ!";
         } else {
             // try to parse the postal code into an int.
             try {
                 Integer.parseInt(plzFeld.getText());
             } catch (NumberFormatException e) {
-                errorMeldung += "PLZ muss eine Zahl sein!\n";
+                errorMeldung += "PLZ muss eine Zahl sein!";
             }
         }
 
-        mainFrameController.setInfo(errorMeldung, "NOK");
+        mainFrameController.setInfo(errorMeldung, "NOK", true);
         return isValid;
     }
 
