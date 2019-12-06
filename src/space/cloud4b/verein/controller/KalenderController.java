@@ -33,6 +33,8 @@ public class KalenderController implements Subject  {
         return FXCollections.observableArrayList(DatabaseReader.getKommendeTermineAsArrayList());
     }
 
+    public ArrayList<Termin> getTermineAsArrayList() { return DatabaseReader.getTermineAsArrayList();}
+
     private void startTimerActor() {
         Runnable checkMysqlRunner = () -> {
             int zaehler = 0;

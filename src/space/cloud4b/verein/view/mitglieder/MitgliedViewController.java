@@ -167,7 +167,7 @@ public class MitgliedViewController implements Observer {
      * @param mitglied
      */
     public void setMitglied(Mitglied mitglied) {
-        if(unsavedChanges== true) {
+        if(unsavedChanges) {
             // Show the error message.
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.initOwner(dialogStage);
@@ -316,10 +316,11 @@ public class MitgliedViewController implements Observer {
      * notwendig wird.
      */
     public void onValueChanged() {
-        if(!unsavedChanges) {
+      /*  if(!unsavedChanges) {
             unsavedChanges = true;
             mainFrameController.setInfo("Änderungen wurden noch nicht gespeichert!", "INFO", true);
-        }
+        }*/
+      // TODO
     }
     /**
      * überprüft die Daten und speichert sie

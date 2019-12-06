@@ -3,6 +3,7 @@ package space.cloud4b.verein.services;
 import space.cloud4b.verein.model.verein.adressbuch.Kontakt;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.kalender.Jubilaeum;
+import space.cloud4b.verein.model.verein.kalender.Teilnehmer;
 import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.model.verein.status.Status;
 import space.cloud4b.verein.services.connection.MysqlConnection;
@@ -35,7 +36,63 @@ public abstract class DatabaseReader {
         return 0;
     }
 
+    /**
+     * ermittelt die Teilnehmerliste zu einem Termin
+     */
+    public static ArrayList<Teilnehmer> getTeilnehmer(Termin termin) {
+        ArrayList<Teilnehmer> teilnehmerListe = new ArrayList<>();
+        Status anmeldung = new Status(5);
+        Status teilnahme = new Status(6);
+        int terminId = termin.getTerminId();
+        try (Connection conn = new MysqlConnection().getConnection();
+             Statement st = conn.createStatement()) {
+            String query = "SELECT kontakt.KontaktId, kontakt.KontaktNachname, kontakt.KontaktVorname FROM terminkontrolle LEFT JOIN kontakt ON kontakt.KontaktId = KontrolleMitgliedId WHERE KontrolleTerminId = " + terminId + " GROUP BY KontrolleMitgliedId";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                teilnehmerListe.add(
+                        new Teilnehmer(
+                                new Mitglied(rs.getInt("KontaktId"), rs.getString("KontaktNachname"), rs.getString("KontaktVorname"))));
+            }
+            int i = 0;
+            while(teilnehmerListe.size() > i){
+                int teilId = teilnehmerListe.get(i).getMitglied().getId();
+                query = "SELECT `KontrolleWert` AS AnmeldeStatus FROM `terminkontrolle` " +
+                        "WHERE `KontrolleTerminId` = " + terminId + " " +
+                        "AND `KontrolleMitgliedId` = " + teilId +
+                        " AND `KontrolleArt`='Anmeldung'";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                   // anredeStatus.getStatusElemente().get(rs.getInt("KontaktAnredeStatus"))
+                    teilnehmerListe.get(i).setAnmeldeStatus(anmeldung.getStatusElemente().get(rs.getInt("AnmeldeStatus")));
+                }
+                i++;
 
+            }
+            // Infos zum Teilnahmestatus hinzufügen
+            i = 0;
+            while(teilnehmerListe.size() > i){
+                int teilId = teilnehmerListe.get(i).getMitglied().getId();
+                query = "SELECT `KontrolleWert` AS TeilnahmeStatus FROM `terminkontrolle` " +
+                        "WHERE `KontrolleTerminId` = " + terminId + " " +
+                        "AND `KontrolleMitgliedId` = " + teilId +
+                        " AND `KontrolleArt`='Anwesenheit'";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                    // anredeStatus.getStatusElemente().get(rs.getInt("KontaktAnredeStatus"))
+                    teilnehmerListe.get(i).setTeilnahmeStatus(teilnahme.getStatusElemente().get(rs.getInt("TeilnahmeStatus")));
+                }
+                i++;
+
+            }
+            return teilnehmerListe;
+        } catch (SQLException e) {
+            System.out.println("Anzahl Termine konnte nicht ermittelt werden ("+ e + ")");
+
+        } finally {
+            return teilnehmerListe;
+        }
+
+    }
 
     /**
      * Zählt die Anzahl Termine im laufenden Jahr
@@ -222,6 +279,64 @@ public abstract class DatabaseReader {
         } catch (SQLException e) {
             System.out.println("Termine konnten nicht erzeugt werden");
 
+        }
+        return terminListe;
+    }
+
+    public static ArrayList<Termin> getTermineAsArrayList(){
+        ArrayList<Termin> terminListe = new ArrayList<>();
+        try (Connection conn = new MysqlConnection().getConnection(); Statement st = conn.createStatement()) {
+            String query = "SELECT * from usr_web116_5.termin ORDER BY TerminDatum ASC";
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                Termin termin;
+                LocalDateTime terminZeit = null;
+                LocalDateTime terminZeitBis = null;
+                int terminId = rs.getInt("TerminId");
+                LocalDate terminDatum = Date.valueOf(rs.getString("TerminDatum")).toLocalDate();
+
+                String terminText = rs.getString("TerminText");
+
+                /**
+                 * Objekte werden erzeugt und der Terminliste hinzugefügt
+                 */
+                termin = new Termin(terminId, terminDatum, terminText);
+                if(rs.getString("TerminZeit") != null) {
+                    terminZeit = LocalDateTime.of(terminDatum, Time.valueOf(rs.getString("TerminZeit")).toLocalTime());
+                    termin.setZeit(terminZeit);
+                }
+                if(rs.getString("TerminZeitBis") != null) {
+                    terminZeitBis = LocalDateTime.of(terminDatum, Time.valueOf(rs.getString("TerminZeitBis")).toLocalTime());
+                    termin.setZeitBis(terminZeitBis);
+                }
+                if(rs.getString("TerminOrt") != null){
+                    termin.setOrt(rs.getString("TerminOrt"));
+                }
+                if(rs.getString("TerminDetails") != null){
+                    termin.setDetails(rs.getString("TerminDetails"));
+                }
+                if(rs.getString("TerminTrackChangeUsr") != null){
+                    termin.setTrackChangeUsr(rs.getString("TerminTrackChangeUsr"));
+                }
+                if(rs.getString("TerminTrackChangeTimestamp") != null) {
+                    termin.setTrackChangeTimestamp(rs.getTimestamp("TerminTrackChangeTimestamp"));
+                }
+
+      /*          if(rs.getString("TerminTeilnehmerKatA") != null){
+                    termin.setTeilnehmerKatI();
+                }
+                termin.setTeilnehmerKatI();
+                termin.setTeilnehmerKatII();*/
+
+
+
+                terminListe.add(termin);
+                System.out.println("Termine erstellt");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Termine konnten nicht erzeugt werden");
         }
         return terminListe;
     }

@@ -342,10 +342,12 @@
     -fx-background-color: black;
     -fx-background-radius:50px;
     -fx-border-color: white;
-    -fx-border-width: 5px;
+    -fx-border-width: 3px;
     -fx-border-radius: 50px;
+    -fx-pref-height: 10;
 }
 
 .slider .track {
     -fx-background-color: black;
 }
+
