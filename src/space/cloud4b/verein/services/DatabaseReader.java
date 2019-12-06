@@ -123,7 +123,7 @@ public abstract class DatabaseReader {
             String query = "SELECT MAX(KontaktTrackChangeTimestamp) AS LetzteAenderung FROM usr_web116_5.kontakt";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                System.out.println("letzte Aenderung: " + rs.getString("LetzteAenderung"));
+                //System.out.println("letzte Aenderung: " + rs.getString("LetzteAenderung"));
                 return Timestamp.valueOf(rs.getString("LetzteAenderung"));
             }
         } catch (SQLException e) {
