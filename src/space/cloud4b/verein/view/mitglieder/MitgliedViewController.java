@@ -293,6 +293,12 @@ public class MitgliedViewController implements Observer {
         setMitglied(aktuellesMitglied);
     }
 
+    /**
+     * neues Mitglied erfassen
+     */
+    public void handleErfassenButton() {
+        mainApp.showMitgliedErfassen();
+    }
     public void handleLoeschenButton() {
         // Show the error message.
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

@@ -171,6 +171,7 @@
                         <HBox alignment="TOP_RIGHT" prefHeight="74.0" prefWidth="707.0" spacing="10.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#handleLoeschenButton" text="Löschen" />
+                              <Button mnemonicParsing="false" onAction="#handleErfassenButton" text="Mitglied hinzufügen" />
                               <Button mnemonicParsing="false" onAction="#handleResetButton" text="Reset" />
                               <Button mnemonicParsing="false" onAction="#handleSpeichernButton" text="Speichern">
                                  <HBox.margin>

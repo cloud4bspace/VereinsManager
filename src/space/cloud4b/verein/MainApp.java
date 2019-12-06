@@ -17,6 +17,7 @@ import space.cloud4b.verein.services.DatabaseOperation;
 import space.cloud4b.verein.view.chart.BirthdayStatisticsController;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
+import space.cloud4b.verein.view.mitglieder.MitgliedNeuViewController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
 import space.cloud4b.verein.view.termine.TerminViewController;
 
@@ -173,6 +174,34 @@ public class MainApp extends Application {
             BirthdayStatisticsController controller = loader.getController();
             // controller.setPersonData(contactData);
             controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Opens a dialog to show birthday statistics.
+     */
+    public void showMitgliedErfassen() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/mitglieder/MitgliedNeuView.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Mitglied erfassen");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            MitgliedNeuViewController controller = loader.getController();
+            // controller.setPersonData(contactData);
+            //controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
 
             dialogStage.show();
 
