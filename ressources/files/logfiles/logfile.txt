@@ -1,0 +1,378 @@
+
+***** 2019-12-04 01:49:41.705 | Contact #1 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=1 | KontaktNachname=Kämpf | KontaktVorname=Bernhard | KontaktAdresse=Brauerstrasse 98 | KontaktAdresszusatz= | KontaktPLZ=8004 | KontaktOrt=Zürich | KontaktGeburtsdatum=1973-04-18 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2009-09-10 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=2 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=1 | KontaktBemerkungen=null | KontaktMobile=+41 76 234 23 11 | KontaktTelefon=+41 44 345 22 11 | KontaktEMail=Bernhard.Kämpf@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-03 21:27:24 | 
+***** neu values from contact-object *****
+MitgliedId=1 | KontaktNachname=Kämpf | KontaktVorname=Bernhard | KontaktAdresse=Brauerstrasse 98 | KontaktAdresszusatz=Postfach | KontaktOrt=Zürich | KontaktPLZ=8004 | KontaktGeburtsdatum=1973-04-18 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: true]
+
+***** 2019-12-04 01:56:17.185 | Contact #11 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=11 | KontaktNachname=Kebel | KontaktVorname=Roland | KontaktAdresse=Hintergasse 10 | KontaktAdresszusatz=null | KontaktPLZ=3422 | KontaktOrt=Kirchberg | KontaktGeburtsdatum=1973-05-06 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2007-01-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 79 345 67 89 | KontaktTelefon=null | KontaktEMail=Roland.Kebel@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-02 22:52:41 | 
+***** neu values from contact-object *****
+MitgliedId=11 | KontaktNachname=Kebel | KontaktVorname=Roland | KontaktAdresse=Hintergasse 10 | KontaktAdresszusatz=null | KontaktOrt=Kirchberg | KontaktPLZ=3422 | KontaktGeburtsdatum=1973-05-06 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 06:35:41.654 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-03 20:50:04 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 21:53:42.115 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 06:35:36 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 21:54:47.477 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 21:53:38 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 21:57:32.383 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 21:54:42 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 21:58:58.037 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 21:57:27 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 22:03:02.39 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 21:58:53 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 22:05:44.44 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 22:02:57 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 22:06:07.383 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 22:05:39 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 22:06:14.664 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 22:06:02 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 22:09:43.627 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 22:06:09 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-04 22:11:58.122 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 22:09:39 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 05:55:31.66 | Contact #11 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=11 | KontaktNachname=Kebel | KontaktVorname=Roland | KontaktAdresse=Hintergasse 10 | KontaktAdresszusatz=null | KontaktPLZ=3422 | KontaktOrt=Kirchberg | KontaktGeburtsdatum=1973-05-06 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2007-01-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 79 345 67 89 | KontaktTelefon=+41 34 234 22 33 | KontaktEMail=Roland.Kebel@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 01:56:12 | 
+***** neu values from contact-object *****
+MitgliedId=11 | KontaktNachname=Kebel | KontaktVorname=Roland | KontaktAdresse=Hintergasse 10 | KontaktAdresszusatz=null | KontaktOrt=Kirchberg | KontaktPLZ=3422 | KontaktGeburtsdatum=1973-05-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=♬ | T1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 05:55:45.676 | Contact #11 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=11 | KontaktNachname=Kebel | KontaktVorname=Roland | KontaktAdresse=Hintergasse 10 | KontaktAdresszusatz=null | KontaktPLZ=3422 | KontaktOrt=Kirchberg | KontaktGeburtsdatum=1973-05-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2007-01-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 79 345 67 89 | KontaktTelefon=+41 34 234 22 33 | KontaktEMail=Roland.Kebel@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 05:55:24 | 
+***** neu values from contact-object *****
+MitgliedId=11 | KontaktNachname=Kebel | KontaktVorname=Roland | KontaktAdresse=Hintergasse 10 | KontaktAdresszusatz=null | KontaktOrt=Kirchberg | KontaktPLZ=3422 | KontaktGeburtsdatum=1973-05-06 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 13:56:11.587 | Contact #28 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=28 | KontaktNachname=Rubli | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-11-26 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 13:46:43 | 
+***** neu values from contact-object *****
+MitgliedId=28 | KontaktNachname=Rubli | KontaktVorname=Peter | KontaktAdresse=Kohlweg 34 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8004 | KontaktGeburtsdatum=1934-06-05 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:21:31.961 | Contact #29 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=29 | KontaktNachname=Brunner | KontaktVorname=Gaby | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-03-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:19:54 | 
+***** neu values from contact-object *****
+MitgliedId=29 | KontaktNachname=Brunner | KontaktVorname=Gaby | KontaktAdresse=Dorfplatz 23 | KontaktAdresszusatz=null | KontaktOrt=Ersigen | KontaktPLZ=3423 | KontaktGeburtsdatum=1972-04-18 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:26:40.05 | Contact #12 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=12 | KontaktNachname=Frieser | KontaktVorname=Arno | KontaktAdresse=Müllerstrasse 34 | KontaktAdresszusatz=null | KontaktPLZ=2300 | KontaktOrt=Lausanne | KontaktGeburtsdatum=1961-09-09 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2009-10-03 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 79 456 78 90 | KontaktTelefon=null | KontaktEMail=Arno.Frieser@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-01 00:00:00 | 
+***** neu values from contact-object *****
+MitgliedId=12 | KontaktNachname=Frieser | KontaktVorname=Arno | KontaktAdresse=Müllerstrasse 34 | KontaktAdresszusatz=null | KontaktOrt=Lausanne | KontaktPLZ=2300 | KontaktGeburtsdatum=1961-09-09 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:27:11.142 | Contact #23 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-04-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 07:23:59 | 
+***** neu values from contact-object *****
+MitgliedId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktOrt=Seftigen | KontaktPLZ=3060 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:27:44.133 | Contact #23 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktPLZ=3060 | KontaktOrt=Seftigen | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2009-10-03 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=2 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:27:04 | 
+***** neu values from contact-object *****
+MitgliedId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktOrt=Seftigen | KontaktPLZ=3060 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♫ | T2 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:36:21.337 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 08:02:23 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=null | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:36:43.77 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 08:02:23 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:36:53.273 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:36:37 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:36:58.336 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:36:46 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=null | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 14:45:39.777 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:36:46 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=null | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:00:42.569 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:36:46 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:03:38.543 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:02:05 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:04:34.019 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:03:47 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=null | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:05:54.95 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:03:47 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:06:02.956 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:05:47 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktOrt=null | KontaktPLZ=3006 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:06:18.036 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Test | KontaktAdresszusatz=hhh | KontaktPLZ=3006 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:05:55 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:06:23.199 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:06:11 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:07:09.554 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:06:15 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 1878 | KontaktAdresszusatz= | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:07:28.168 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 1878 | KontaktAdresszusatz= | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:07:01 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz=jjj | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:07:36.962 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz=jjj | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:07:20 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 1878 | KontaktAdresszusatz=jjj | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:07:46.471 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 1878 | KontaktAdresszusatz=jjj | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:07:29 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz=jjj | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:07:53.611 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz=jjj | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:07:40 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:08:30.383 | Contact #30 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=30 | KontaktNachname=Trummer | KontaktVorname=Karin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-10-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:08:11 | 
+***** neu values from contact-object *****
+MitgliedId=30 | KontaktNachname=Trummer | KontaktVorname=Karin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=null | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:08:36.476 | Contact #30 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=30 | KontaktNachname=Trummer | KontaktVorname=Karin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-10-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:08:11 | 
+***** neu values from contact-object *****
+MitgliedId=30 | KontaktNachname=Trummer | KontaktVorname=Karin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:09:14.062 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-04 22:11:53 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:09:35.806 | Contact #27 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:07:45 | 
+***** neu values from contact-object *****
+MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:45:14.87 | Contact #23 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktPLZ=3060 | KontaktOrt=Seftigen | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2009-10-03 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:27:37 | 
+***** neu values from contact-object *****
+MitgliedId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktOrt=Seftigen | KontaktPLZ=3060 | KontaktGeburtsdatum=1956-12-05 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♫ | T2 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:46:35.34 | Contact #23 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktPLZ=3060 | KontaktOrt=Seftigen | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2009-10-03 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:27:37 | 
+***** neu values from contact-object *****
+MitgliedId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktOrt=Seftigen | KontaktPLZ=3060 | KontaktGeburtsdatum=1956-12-06 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=♫ | T2 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:46:58.255 | Contact #7 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=7 | KontaktNachname=Kaiser | KontaktVorname=Serge | KontaktAdresse=Weissensteinstrasse 7 | KontaktAdresszusatz=null | KontaktPLZ=3400 | KontaktOrt=Burgdorf | KontaktGeburtsdatum=1970-12-23 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=1980-01-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=2 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+44 67 776 66 33 | KontaktTelefon=null | KontaktEMail=Serge.Kaiser@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-01 00:00:00 | 
+***** neu values from contact-object *****
+MitgliedId=7 | KontaktNachname=Kaiser | KontaktVorname=Serge | KontaktAdresse=Weissensteinstrasse 7 | KontaktAdresszusatz=null | KontaktOrt=Burgdorf | KontaktPLZ=3400 | KontaktGeburtsdatum=1970-12-23 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:47:55.341 | Contact #30 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=30 | KontaktNachname=Trummer | KontaktVorname=Karin | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-10-01 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:08:28 | 
+***** neu values from contact-object *****
+MitgliedId=30 | KontaktNachname=Trummer | KontaktVorname=Karin | KontaktAdresse=Gartenhof 23b | KontaktAdresszusatz=null | KontaktOrt=Biel | KontaktPLZ=2500 | KontaktGeburtsdatum=1945-12-06 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 15:48:39.081 | Contact #24 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=24 | KontaktNachname=Zacher | KontaktVorname=Matthias | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-12-05 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 07:43:24 | 
+***** neu values from contact-object *****
+MitgliedId=24 | KontaktNachname=Zacher | KontaktVorname=Matthias | KontaktAdresse=Juraweg 2 | KontaktAdresszusatz=c/o Rita Binggeli | KontaktOrt=Lausanne | KontaktPLZ=1200 | KontaktGeburtsdatum=1987-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Sen | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:13:27.598 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhardo | KontaktVorname=Thomaso | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:13:00 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:16:12.852 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhardio | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:13:40 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:17:34.187 | Contact #31 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=31 | KontaktNachname=Frischknecht | KontaktVorname=Sabine | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=1999-07-26 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:16:31 | 
+***** neu values from contact-object *****
+MitgliedId=31 | KontaktNachname=Frischknecht | KontaktVorname=Sabine | KontaktAdresse=Frauenwohnheim | KontaktAdresszusatz=Zimmer 122/23 | KontaktOrt=Zürich | KontaktPLZ=8004 | KontaktGeburtsdatum=1933-02-11 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:17:50.42 | Contact #31 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=31 | KontaktNachname=Frischknecht | KontaktVorname=Sabine | KontaktAdresse=Frauenwohnheim | KontaktAdresszusatz=Zimmer 122/23 | KontaktPLZ=8004 | KontaktOrt=Zürich | KontaktGeburtsdatum=1933-02-11 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=1999-07-26 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:17:26 | 
+***** neu values from contact-object *****
+MitgliedId=31 | KontaktNachname=Frischknecht | KontaktVorname=Sabine | KontaktAdresse=Frauenwohnheim | KontaktAdresszusatz=Zimmer 122/23 | KontaktOrt=Zürich | KontaktPLZ=8004 | KontaktGeburtsdatum=1933-02-11 | KontaktAnredeStatus=♀ | Frau | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:31:40.989 | Contact #19 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=19 | KontaktNachname=Peter | KontaktVorname=Werner | KontaktAdresse= | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt= | KontaktGeburtsdatum=null | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-05 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 06:56:36 | 
+***** neu values from contact-object *****
+MitgliedId=19 | KontaktNachname=Peter | KontaktVorname=Werner | KontaktAdresse=Mythenquai | KontaktAdresszusatz=Hotel Sternen | KontaktOrt=Luzern | KontaktPLZ=4500 | KontaktGeburtsdatum=1986-01-31 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:31:58.36 | Contact #22 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=22 | KontaktNachname=Künzle | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-12-04 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 07:15:32 | 
+***** neu values from contact-object *****
+MitgliedId=22 | KontaktNachname=Künzle | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-09 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:38:52.992 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-02-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:16:05 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-07-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 16:39:40.204 | Contact #9 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-07-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:38:45 | 
+***** neu values from contact-object *****
+MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-08-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
