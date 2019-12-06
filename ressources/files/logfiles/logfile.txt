@@ -376,3 +376,17 @@ bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.loca
 KontaktId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktPLZ=4900 | KontaktOrt=Langenthal | KontaktGeburtsdatum=1980-07-01 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=3 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=Ein Mensch mit zwei Vornamen.. | KontaktMobile=+41 79 123 45 67 | KontaktTelefon=+41 44 098 87 65 | KontaktEMail=Thomas.Bernhard@gmail.com | KontaktEMailII=thomasbernhard@swissonline.ch | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:38:45 | 
 ***** neu values from contact-object *****
 MitgliedId=9 | KontaktNachname=Bernhard | KontaktVorname=Thomas | KontaktAdresse=c/o Kasper AG | KontaktAdresszusatz=Riedtstrasse 441 | KontaktOrt=Langenthal | KontaktPLZ=4900 | KontaktGeburtsdatum=1980-08-01 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♪ | B1 | KontaktKategorieB=na | Jun | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 17:46:24.207 | Contact #32 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=null | KontaktTrackChangeTimestamp=2019-12-06 17:00:43 | 
+***** neu values from contact-object *****
+MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-12 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 17:47:42.164 | Contact #32 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-12 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 17:46:16 | 
+***** neu values from contact-object *****
+MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8002 | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
