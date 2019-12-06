@@ -390,3 +390,38 @@ bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.loca
 KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-12 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 17:46:16 | 
 ***** neu values from contact-object *****
 MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8002 | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 18:15:41.998 | Contact #32 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktPLZ=8002 | KontaktOrt=Zürich | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=3 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 17:47:34 | 
+***** neu values from contact-object *****
+MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Peterf | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8002 | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 18:15:48.969 | Contact #32 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peterf | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktPLZ=8002 | KontaktOrt=Zürich | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=3 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 18:15:33 | 
+***** neu values from contact-object *****
+MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8002 | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 18:19:10.04 | Contact #33 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=33 | KontaktNachname=Rinderknecht | KontaktVorname=Manuel | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2015-06-04 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 18:18:36 | 
+***** neu values from contact-object *****
+MitgliedId=33 | KontaktNachname=Rinderknecht | KontaktVorname=Manuel | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=1987-12-04 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 18:58:26.69 | Contact #32 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktPLZ=8002 | KontaktOrt=Zürich | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=3 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 18:15:40 | 
+***** neu values from contact-object *****
+MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8002 | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-06 18:58:40.083 | Contact #32 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=32 | KontaktNachname=Aebi | KontaktVorname=Peter | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktPLZ=8002 | KontaktOrt=Zürich | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=3 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 18:58:19 | 
+***** neu values from contact-object *****
+MitgliedId=32 | KontaktNachname=Aebi | KontaktVorname=Renée | KontaktAdresse=Lagerstrasse 17 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8002 | KontaktGeburtsdatum=1965-12-12 | KontaktAnredeStatus=♂ | Herr | KontaktKategorieA=♬ | T1 | KontaktKategorieB=0 | Pas | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
