@@ -357,20 +357,22 @@ public abstract class DatabaseReader {
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 String geburtsDatum = rs.getString("KontaktGeburtsdatum");
-                int geburtsJahr = Integer.parseInt(geburtsDatum.substring(0,4));
-                // alter in diesem Jahr
-                int alter = jahr - geburtsJahr;
-                geburtsDatum = jahr + geburtsDatum.substring(4,10);
-                System.out.println("GebdiesesJahr: " + geburtsDatum);
-                ;
-                LocalDate geburtsDatumLD = Date.valueOf(geburtsDatum).toLocalDate();
-                // Wenn der nächste Geburtstag grösser ist als heute
+                if(geburtsDatum != null) {
+                    int geburtsJahr = Integer.parseInt(geburtsDatum.substring(0, 4));
+                    // alter in diesem Jahr
+                    int alter = jahr - geburtsJahr;
+                    geburtsDatum = jahr + geburtsDatum.substring(4, 10);
+                    System.out.println("GebdiesesJahr: " + geburtsDatum);
+                    ;
+                    LocalDate geburtsDatumLD = Date.valueOf(geburtsDatum).toLocalDate();
+                    // Wenn der nächste Geburtstag grösser ist als heute
 
-                if(geburtsDatumLD.isAfter(LocalDate.now().minusDays(1))) {
-                    jubilaeumsListe.add(new Jubilaeum(999, geburtsDatumLD, alter + ". Geburtstag von " + rs.getString("KontaktVorname")+ " " + rs.getString("KontaktNachname")));
-                } else {
-                    // nächster Geburtstag ist erst im nächsten Jahr
-                    jubilaeumsListe.add(new Jubilaeum(999, geburtsDatumLD.plusYears(1), (alter + 1 ) + ". Geburtstag von " + rs.getString("KontaktVorname")+ " " + rs.getString("KontaktNachname")));
+                    if (geburtsDatumLD.isAfter(LocalDate.now().minusDays(1))) {
+                        jubilaeumsListe.add(new Jubilaeum(999, geburtsDatumLD, alter + ". Geburtstag von " + rs.getString("KontaktVorname") + " " + rs.getString("KontaktNachname")));
+                    } else {
+                        // nächster Geburtstag ist erst im nächsten Jahr
+                        jubilaeumsListe.add(new Jubilaeum(999, geburtsDatumLD.plusYears(1), (alter + 1) + ". Geburtstag von " + rs.getString("KontaktVorname") + " " + rs.getString("KontaktNachname")));
+                    }
                 }
             }
 

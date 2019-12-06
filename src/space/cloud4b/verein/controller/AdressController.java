@@ -79,13 +79,11 @@ public class AdressController implements Subject {
                 }
                 // hat sich der Zeitstempel der letzten Äenderung verändert?
                 // TODO muss man noch machen
-              /*  if(this.timestamp == null) {
+                if(this.timestamp == null) {
                     updateLetzeAenderung(DatabaseReader.readLetzteAenderung());
-                    return;
                 } else if (DatabaseReader.readLetzteAenderung().after(this.timestamp)){
                     updateLetzeAenderung(DatabaseReader.readLetzteAenderung());
-                    return;
-                }*/
+                }
                 try {
                     Thread.sleep(2000);
 

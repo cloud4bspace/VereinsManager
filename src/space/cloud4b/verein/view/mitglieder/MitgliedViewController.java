@@ -200,7 +200,11 @@ public class MitgliedViewController implements Observer {
         eMailFeld.setText(mitglied.getEmail());
         eMailIIFeld.setText(mitglied.getEmailII());
         geburtsdatumPicker.setValue(mitglied.getGeburtsdatum());
-        alterLabel.setText("Geburtsdatum (" + Period.between(mitglied.getGeburtsdatum(), LocalDate.now()).getYears() + ")");
+        if(mitglied.getGeburtsdatum()!=null) {
+            alterLabel.setText("Geburtsdatum (" + Period.between(mitglied.getGeburtsdatum(), LocalDate.now()).getYears() + ")");
+        } else {
+            alterLabel.setText("Geburtsdatum");
+        }
         mitgliedSeitLabel.setText("Eintritt (" + Period.between(mitglied.getEintrittsdatum(), LocalDate.now()).getYears() + ")");
         eintrittsDatumPicker.setValue(mitglied.getEintrittsdatum());
         austrittsDatumPicker.setValue(mitglied.getAustrittsDatum());
