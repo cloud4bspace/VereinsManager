@@ -49,22 +49,23 @@
                                           <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
+                                           <Label text="Anrede" />
+                                           <ComboBox fx:id="comboBoxAnrede" onAction="#onValueChanged" onMouseReleased="#onValueChanged" prefHeight="27.0" prefWidth="177.0" GridPane.columnIndex="1" />
                                           <Label prefHeight="15.0" prefWidth="104.0" text="Nachname" GridPane.rowIndex="1" />
                                           <Label text="Vorname" GridPane.rowIndex="2" />
                                           <Label text="Strasse" GridPane.rowIndex="3" />
                                           <Label text="Adresszusatz" GridPane.rowIndex="4" />
                                           <Label text="PLZ" GridPane.rowIndex="5" />
                                           <Label text="Ort" GridPane.rowIndex="6" />
+                                           <Label fx:id="alterLabel" text="Geburtstag" GridPane.rowIndex="7" />
+                                           <TextField fx:id="nachNameFeld" onAction="#onValueChanged" onInputMethodTextChanged="#onValueChanged" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                           <TextField fx:id="vorNameFeld" onInputMethodTextChanged="#onValueChanged" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                           <TextField fx:id="adresseFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                           <TextField fx:id="adressZusatzFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                          <TextField fx:id="nachNameFeld" onAction="#onValueChanged" onInputMethodTextChanged="#onValueChanged" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <Label text="Anrede" />
-                                          <ComboBox fx:id="comboBoxAnrede" onAction="#onValueChanged" onMouseReleased="#onValueChanged" prefHeight="27.0" prefWidth="177.0" GridPane.columnIndex="1" />
-                                          <Label fx:id="alterLabel" text="Geburtstag" GridPane.rowIndex="7" />
+                                           <TextField fx:id="plzFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                           <TextField fx:id="ortFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                           <DatePicker fx:id="geburtsdatumPicker" onKeyTyped="#onValueChanged" onMouseReleased="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                          <TextField fx:id="plzFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                          <TextField fx:id="ortFeld" onKeyTyped="#onValueChanged" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
                                           <Label text="Profilbild" GridPane.rowIndex="8" />
                                           <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
                                              <children>

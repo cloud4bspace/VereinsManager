@@ -72,14 +72,13 @@ public class AdressController implements Subject {
         Runnable blinkRunner = () -> {
             int zaehler = 0;
             while (true) {
-                System.out.println("Thread Adresse " + this + " läuft");
-
                 // hat sich die Anzahl der Einträge in der Tabelle Kontakt verändert
                 if(DatabaseReader.readAnzahlMitglieder() != anzahlMitglieder) {
                     updateAnzahlMitglieder(DatabaseReader.readAnzahlMitglieder());
                     // hier kein return!! sonst wird Thread beendet!
                 }
                 // hat sich der Zeitstempel der letzten Äenderung verändert?
+                // TODO muss man noch machen
               /*  if(this.timestamp == null) {
                     updateLetzeAenderung(DatabaseReader.readLetzteAenderung());
                     return;
