@@ -408,7 +408,8 @@ public class MitgliedViewController implements Observer {
             AdressController ac = (AdressController) o;
             Platform.runLater(new Runnable() {
                 @Override
-                public void run() { mitgliedTabelle.setItems(((AdressController) o).getMitgliederListe()); }
+                public void run() { mitgliedTabelle.setItems(((AdressController) o).getMitgliederListe());;
+                }
             });
         }
     }

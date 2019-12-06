@@ -38,6 +38,28 @@ public abstract class DatabaseOperation {
 
         }
     }
+    /**
+     * neues Mitglied in der Datenbank anlegen
+     */
+    public static void saveNewMember(String nachname, String vorname, String eintrittsDatum){
+
+        String query= "INSERT INTO usr_web116_5.kontakt (KontaktId, KontaktNachname, " +
+                    "KontaktVorname, KontaktEintrittsdatum, KontaktIstMitglied, KontaktTrackChangeUsr, " +
+                    "KontaktTrackChangeTimestamp) VALUES (NULL, ?, ?, ?, '1', ?, CURRENT_TIMESTAMP)";
+        MysqlConnection conn = new MysqlConnection();
+        PreparedStatement ps = null;
+        try {
+            ps = conn.getConnection().prepareStatement(query);
+            ps.setString(1, nachname);
+            ps.setString(2, vorname);
+            ps.setString(3, eintrittsDatum);
+            ps.setString(4, System.getProperty("user.name"));
+            System.out.println("neues Mitglied hinzugefügt: " + ps.executeUpdate());
+
+    } catch(SQLException e) {
+        System.out.println("Fehler " + e);
+        }
+    }
 
     /**
      * Prüft aufgrund des Austrittsdatums den aktuellen Mitgliederstatus

@@ -2,6 +2,7 @@ package space.cloud4b.verein.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import space.cloud4b.verein.MainApp;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.kalender.Jubilaeum;
 import space.cloud4b.verein.services.DatabaseOperation;
@@ -11,6 +12,7 @@ import space.cloud4b.verein.services.Subject;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
+import sun.applet.Main;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 public class AdressController implements Subject {
 
     private int anzahlMitglieder;
+    private MainApp mainApp;
     private Timestamp timestamp = null;
     private DashBoardController dashBoardController;
     private MitgliedViewController mitgliedViewController;
@@ -28,11 +31,16 @@ public class AdressController implements Subject {
         observerList = new ArrayList<>();
         startTimerActor();
     }
+
     public AdressController(MitgliedViewController mitgliedViewController) {
         System.out.println("AdressController erzeugt");
         this.mitgliedViewController = mitgliedViewController;
         observerList = new ArrayList<>();
         startTimerActor();
+    }
+
+    public void setAnzahlMitglieder(MainApp mainApp){
+        this.mainApp = mainApp;
     }
     public void setDashBoardController(DashBoardController dashBoardController) {
         this.dashBoardController = dashBoardController;
@@ -64,21 +72,24 @@ public class AdressController implements Subject {
         Runnable blinkRunner = () -> {
             int zaehler = 0;
             while (true) {
+                System.out.println("Thread Adresse " + this + " läuft");
+
                 // hat sich die Anzahl der Einträge in der Tabelle Kontakt verändert
                 if(DatabaseReader.readAnzahlMitglieder() != anzahlMitglieder) {
                     updateAnzahlMitglieder(DatabaseReader.readAnzahlMitglieder());
-                    return;
+                    // hier kein return!! sonst wird Thread beendet!
                 }
                 // hat sich der Zeitstempel der letzten Äenderung verändert?
-                if(this.timestamp == null) {
+              /*  if(this.timestamp == null) {
                     updateLetzeAenderung(DatabaseReader.readLetzteAenderung());
                     return;
                 } else if (DatabaseReader.readLetzteAenderung().after(this.timestamp)){
                     updateLetzeAenderung(DatabaseReader.readLetzteAenderung());
                     return;
-                }
+                }*/
                 try {
                     Thread.sleep(2000);
+
                 } catch (InterruptedException e) {
 
                 };

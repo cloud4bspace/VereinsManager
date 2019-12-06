@@ -200,6 +200,8 @@ public class MainApp extends Application {
 
             // Set the persons into the controller.
             MitgliedNeuViewController controller = loader.getController();
+            controller.setMainApp(this);
+            controller.setStage(dialogStage);
             // controller.setPersonData(contactData);
             //controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
 

@@ -139,7 +139,6 @@ public class MainFrameController implements Observer {
     private void handleRefresh() {
         System.out.println("Restarting app!");
         mainApp.getPrimaryStage().close();
-        ;
         Platform.runLater(() -> mainApp.start(new Stage()));
     }
 

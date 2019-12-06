@@ -39,6 +39,7 @@ public class KalenderController implements Subject  {
         Runnable checkMysqlRunner = () -> {
             int zaehler = 0;
             while (true) {
+                //System.out.println("Thread Kalender running..");
                 if(DatabaseReader.readAnzahlTermine() != anzahlTermine) {
                     updateAnzahlTermine(DatabaseReader.readAnzahlTermine());
                 }
