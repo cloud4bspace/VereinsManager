@@ -18,7 +18,7 @@ import space.cloud4b.verein.model.verein.status.Status;
 import space.cloud4b.verein.model.verein.status.StatusElement;
 import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
-import sun.jvm.hotspot.oops.IntField;
+
 
 import javax.xml.soap.Text;
 import java.time.LocalDate;

@@ -10,7 +10,7 @@ public abstract class Einstellung {
         try {
             // Load Settings
             Properties loadProps = new Properties();
-            loadProps.loadFromXML(new FileInputStream("/Users/bernhardkaempf/Downloads/VereinsManager/src/space/cloud4b/verein/einstellungen/Systemeinstellungen.xml"));
+            loadProps.loadFromXML(new FileInputStream("../VereinsManager/src/space/cloud4b/verein/einstellungen/Systemeinstellungen.xml"));
             String propValue = loadProps.getProperty("dbURL");
             return propValue;
         }
