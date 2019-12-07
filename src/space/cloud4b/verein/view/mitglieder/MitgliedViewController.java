@@ -410,7 +410,7 @@ public class MitgliedViewController implements Observer {
         System.out.println("Update-Meldung erhalten");
         if (o instanceof AdressController) {
             AdressController ac = (AdressController) o;
-            Platform.runLater(new Runnable() {
+            Platform.runLater(new Runnable() { // TODO
                 @Override
                 public void run() { mitgliedTabelle.setItems(((AdressController) o).getMitgliederListe());;
                 }

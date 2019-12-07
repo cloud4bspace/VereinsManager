@@ -54,10 +54,10 @@
          <children>
             <MenuBar />
             <Label fx:id="titleLeftLabel" text="Label" />
-            <Button mnemonicParsing="false" onAction="#handleRefresh" prefHeight="27.0" prefWidth="163.0" text="Refresh" />
-            <MenuBar>
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="27.0" prefWidth="163.0" text="Dashboard" />
+            <MenuBar id="leftMenubar">
               <menus>
-                <Menu mnemonicParsing="false" text="Mitglieder">
+                <Menu fx:id="mitgliederMenu" mnemonicParsing="false" text="Mitglieder">
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#handleMitgliederbereich" text="Mitgliederbereich öffnen" />
                         <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Geburtstags-Statistik" />
@@ -67,16 +67,16 @@
                   <Insets />
                </VBox.margin>
             </MenuBar>
-            <MenuBar>
+            <MenuBar id="leftMenubar">
               <menus>
-                <Menu mnemonicParsing="false" text="Termine">
+                <Menu fx:id="termineMenu" mnemonicParsing="false" text="Termine">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#handleTerminbereich" text="Termine verwalten" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
-            <MenuBar id="vMenuBarLeft">
+            <MenuBar id="leftMenubar">
               <menus>
                 <Menu mnemonicParsing="false" text="Sitzungen">
                   <items>
@@ -85,7 +85,7 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <MenuBar id="vMenuBarLeft">
+            <MenuBar id="leftMenubar">
               <menus>
                 <Menu mnemonicParsing="false" text="Auswertungen">
                   <items>
@@ -94,7 +94,7 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <MenuBar id="vMenuBarLeft">
+            <MenuBar id="leftMenubar">
               <menus>
                 <Menu mnemonicParsing="false" text="Export">
                   <items>
