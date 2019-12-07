@@ -65,6 +65,8 @@ public class MainFrameController implements Observer {
     private Label circleLabelI;
     @FXML
     private Label circleLabelII;
+    @FXML
+    private Button homeButton;
 
     /**
      * Is called by the main application to give a reference back to itself.
@@ -97,6 +99,12 @@ public class MainFrameController implements Observer {
     private void initialize() {
         this.mainApp = mainApp;
         Text iconTxt;
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.BACKWARD,"14px");
+        iconTxt.setFill(Color.WHITE);
+       // iconTxt.setStyle("-fx-end-margin: 20px");
+        homeButton.setGraphic(iconTxt);
+        homeButton.setText("Home");
 
         iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.USER, "20px");
         iconTxt.setFill(javafx.scene.paint.Color.WHITE);

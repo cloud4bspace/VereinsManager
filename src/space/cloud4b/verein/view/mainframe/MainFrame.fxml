@@ -54,7 +54,7 @@
          <children>
             <MenuBar />
             <Label fx:id="titleLeftLabel" text="Label" />
-            <Button mnemonicParsing="false" onAction="#handleRefresh" prefHeight="27.0" prefWidth="163.0" text="Refresh" />
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="27.0" prefWidth="163.0" text="Dashboard" />
             <MenuBar>
               <menus>
                 <Menu mnemonicParsing="false" text="Mitglieder">

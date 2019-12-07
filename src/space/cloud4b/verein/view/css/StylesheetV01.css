@@ -69,6 +69,19 @@
     -fx-background-color: #000000;
     -fx-fit-to-width: true;
 }
+
+#homeButton {
+    -fx-font-family: "Andale Mono";
+    -fx-padding: 10,5;
+    -fx-font-size: 14px;
+    -fx-background-color: #000000;
+    -fx-fit-to-width: true;
+    -fx-alignment: left;
+    -fx-text-fill: rgba(255, 255, 255, 0.75);
+}
+#HomeButton .label {
+    -fx-text-fill: red;
+}
 .menu-bar .label {
     -fx-text-fill: rgba(201, 201, 201, 0.75);
 }
