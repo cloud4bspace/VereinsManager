@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< Updated upstream
-    <data-source source="LOCAL" name="usr_web116_5@144.hosttech.eu" uuid="4c2748b6-dccc-4ad1-b2c8-c418f3b36e56">
-=======
-    <data-source source="LOCAL" name="cloud4bspace" uuid="a6c0fe33-d60b-49ad-966d-409fff141385">
->>>>>>> Stashed changes
+    <data-source source="LOCAL" name="cloud4b.space" uuid="01719125-1699-4365-8911-95687d13d9cd">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

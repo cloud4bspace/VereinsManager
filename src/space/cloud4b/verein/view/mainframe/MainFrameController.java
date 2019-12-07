@@ -110,13 +110,13 @@ public class MainFrameController implements Observer {
         mitgliederMenu.setGraphic(iconTxt);
         mitgliederMenu.setText("Mitglieder");
 
-        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.CALENDAR_ALT, "14px");
-        iconTxt.setFill(Color.WHITE);
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.CALENDAR, "14px");
+        iconTxt.setFill(Color.GRAY);
         termineMenu.setGraphic(iconTxt);
         termineMenu.setText("Termine");
 
         iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.BACKWARD,"14px");
-        iconTxt.setFill(Color.WHITE);
+        iconTxt.setFill(Color.GRAY);
        // iconTxt.setStyle("-fx-end-margin: 20px");
         homeButton.setGraphic(iconTxt);
         homeButton.setText("Home");

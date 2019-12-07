@@ -25,7 +25,7 @@ public class StatusElement {
     }
     public String toString() {
         if(!statusElementSymbol.isEmpty()) {
-            return  statusElementSymbol + " | " + statusElementTextKurz;
+            return  statusElementTextLang + " (" +statusElementSymbol + ")";
         } else {
             return this.statusElementTextLang;
         }
