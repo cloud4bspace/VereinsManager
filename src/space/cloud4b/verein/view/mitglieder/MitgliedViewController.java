@@ -264,7 +264,7 @@ public class MitgliedViewController implements Observer {
         // File newFile = new File("profilbild.png");
         // file.renameTo(newFile);
         Path src = Paths.get(file.getAbsolutePath());
-        Path dst = Paths.get("/Users/bernhardkaempf/Downloads/VereinsManager/ressources/images/profilbilder/ProfilBild_" + aktuellesMitglied.getId() + "." + extStr);
+        Path dst = Paths.get("../VereinsManager/ressources/images/profilbilder/ProfilBild_" + aktuellesMitglied.getId() + "." + extStr);
         try {
             java.nio.file.Files.copy(
                     src, dst, StandardCopyOption.COPY_ATTRIBUTES,

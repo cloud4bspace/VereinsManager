@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
 public abstract class DatabaseOperation {
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm");
 
     /**
      * Erstellt die erforderlichen Tabellen für Adressen und Termine aus Tabellen-Vorlagen
