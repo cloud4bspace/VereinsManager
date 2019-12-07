@@ -16,9 +16,20 @@
     -fx-pref-height: 100;
 }
 
-
+/* hover Hauptmenu-Ueberschriften
+   funktioniert nicht gut mit dem linken Menu TODO */
 .menu:hover {
    -fx-background-color: #ffffff;
+}
+
+#leftMenubar .menu:hover {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+
+}
+#leftMenubar .menu:hover .label {
+    -fx-text-fill: black;
+
 }
 
 .menu-bar:focused {
@@ -43,13 +54,17 @@
 }
 .context-menu .menu-item .label {
     -fx-text-fill: #292929;
+    -fx-font-size: 1em;
+    -fx-padding: 5px;
 }
 .context-menu .menu-item:hover  {
-    -fx-background-color: black;
+    -fx-background-color: #ffffff;
 }
 
 .context-menu .menu-item:hover .label {
     -fx-text-fill: #ffffff;
+    -fx-background-color: black;
+    -fx-background-radius: 5px;
 }
 
 .menu-item .label {
@@ -72,18 +87,17 @@
 
 #homeButton {
     -fx-font-family: "Andale Mono";
-    -fx-padding: 10,5;
+    -fx-padding: 10;
     -fx-font-size: 14px;
     -fx-background-color: #000000;
     -fx-fit-to-width: true;
     -fx-alignment: left;
     -fx-text-fill: rgba(255, 255, 255, 0.75);
 }
-#HomeButton .label {
-    -fx-text-fill: red;
-}
+
 .menu-bar .label {
-    -fx-text-fill: rgba(201, 201, 201, 0.75);
+   /* -fx-text-fill: rgba(201, 201, 201, 0.75);*/
+    -fx-text-fill: white;
 }
 
 #hMenuBarTop {

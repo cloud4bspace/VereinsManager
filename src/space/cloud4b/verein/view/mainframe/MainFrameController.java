@@ -22,6 +22,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import space.cloud4b.verein.MainApp;
 import space.cloud4b.verein.model.verein.Verein;
+import sun.jvm.hotspot.gc_interface.G1YCType;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -67,6 +68,10 @@ public class MainFrameController implements Observer {
     private Label circleLabelII;
     @FXML
     private Button homeButton;
+    @FXML
+    private Menu mitgliederMenu;
+    @FXML
+    private Menu termineMenu;
 
     /**
      * Is called by the main application to give a reference back to itself.
@@ -99,6 +104,16 @@ public class MainFrameController implements Observer {
     private void initialize() {
         this.mainApp = mainApp;
         Text iconTxt;
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.GROUP, "14px");
+        iconTxt.setFill(Color.GRAY);
+        mitgliederMenu.setGraphic(iconTxt);
+        mitgliederMenu.setText("Mitglieder");
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.CALENDAR_ALT, "14px");
+        iconTxt.setFill(Color.WHITE);
+        termineMenu.setGraphic(iconTxt);
+        termineMenu.setText("Termine");
 
         iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.BACKWARD,"14px");
         iconTxt.setFill(Color.WHITE);
