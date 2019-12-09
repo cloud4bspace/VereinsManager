@@ -13,15 +13,14 @@ import space.cloud4b.verein.controller.MainController;
 import space.cloud4b.verein.einstellungen.Einstellung;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
-import space.cloud4b.verein.services.DatabaseOperation;
 import space.cloud4b.verein.view.chart.BirthdayStatisticsController;
+import space.cloud4b.verein.view.chart.MemberStatistics01Controller;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 import space.cloud4b.verein.view.mitglieder.MitgliedNeuViewController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
 import space.cloud4b.verein.view.termine.TerminViewController;
 
-import java.io.File;
 import java.io.IOException;
 
 public class MainApp extends Application {
@@ -29,11 +28,12 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane mainFrame;
     private MainFrameController mainFrameController;
+    private MitgliedViewController mitgliedViewController;
     private MainController mainController;
 
     public MainApp() {
        // DatabaseOperation.createDatabaseFromTemplate();
-        // TODO Restore Database from Template
+        // TODO Restore Database from Template (beim Testen wichtig)
         verein = new Verein(Einstellung.getVereinsName());
 
     }
@@ -48,9 +48,16 @@ public class MainApp extends Application {
         showDashboard();
     }
 
+    public void setMitgliedViewController(MitgliedViewController mitgliedViewController){
+        this.mitgliedViewController = mitgliedViewController;
+    }
+
+    public MitgliedViewController getMitgliedViewController(){
+        return mitgliedViewController;
+    }
+
     /**
-     * Initializes the root layout and tries to load the last opened
-     * person file.
+     * Initialisiert das Hauptfenster
      */
     public void initMainFrame() {
         try {
@@ -73,6 +80,10 @@ public class MainApp extends Application {
         }
 
     }
+
+    /**
+     * Zeigt die Hauptübersicht (Dashboard/Cockpit) in der Mitte des Hauptfensters
+     */
     public void showDashboard() {
         try {
             // Load person overview.
@@ -93,7 +104,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Zeigt den Mitgliederbereich
+     * Zeigt den Mitgliederbereich in der Mitte des Hauptfensters
      */
     public boolean showContactEditDialog(Mitglied mitglied) {
         try {
@@ -125,7 +136,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Zeigt den Terminbereich
+     * Zeigt den Termin-Bereich in der Mitte des Hauptfensters
      */
     public boolean showTerminEditDialog() {
         try {
@@ -155,7 +166,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Opens a dialog to show birthday statistics.
+     * Öffnet ein Fenster und zeigt eine Geburtstags-Statistik
      */
     public void showBirthdayStatistics() {
         try {
@@ -172,7 +183,6 @@ public class MainApp extends Application {
 
             // Set the persons into the controller.
             BirthdayStatisticsController controller = loader.getController();
-            // controller.setPersonData(contactData);
             controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
 
             dialogStage.show();
@@ -183,7 +193,34 @@ public class MainApp extends Application {
     }
 
     /**
-     * Opens a dialog to show birthday statistics.
+     * Öffnet ein Fenster und zeigt die Mitglieder-Kategorien als Kuchendiagramm
+     */
+    public void showMemberKatIStatistics() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/chart/MemberStatistics01.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Auswertung Mitglieder nach Kat I");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            MemberStatistics01Controller controller = loader.getController();
+         //   controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Öffnet einen Dialog zum Erfassen eines neuen Mitglieds
      */
     public void showMitgliedErfassen() {
         try {
@@ -213,8 +250,7 @@ public class MainApp extends Application {
     }
 
     /**
-     * Returns the main stage.
-     * @return
+     * Gibt den Haupt-Stage (primaryStage) zurück
      */
     public Stage getPrimaryStage() {
         return primaryStage;

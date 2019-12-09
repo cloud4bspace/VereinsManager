@@ -1,12 +1,14 @@
 package space.cloud4b.verein.model.verein.adressbuch;
 
-import javafx.beans.property.*;
-import space.cloud4b.verein.model.verein.kalender.Termin;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import space.cloud4b.verein.model.verein.status.StatusElement;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 
 public class Mitglied extends  Kontakt {
 
@@ -21,7 +23,12 @@ public class Mitglied extends  Kontakt {
         super(kontaktId, nachName, vorName);
         System.out.println("Konstruktor Mitglied");
     }
+    public Mitglied(int kontaktId, String nachName, String vorName, String eintrittsDatum) {
 
+        super(kontaktId, nachName, vorName);
+        this.eintrittsDatum = Date.valueOf(eintrittsDatum).toLocalDate();
+        System.out.println("Konstruktor Mitglied");
+    }
 
     public void setEintrittsDatum(LocalDate eintrittsDatum) {
         this.eintrittsDatum = eintrittsDatum;

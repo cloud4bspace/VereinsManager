@@ -25,10 +25,10 @@
                   <TableView fx:id="mitgliederTabelle">
                     <columns>
                         <TableColumn fx:id="idSpalte" maxWidth="40.0" prefWidth="30.0" resizable="false" text="#" />
-                      <TableColumn fx:id="nachNameSpalte" prefWidth="94.0" text="Name" />
-                      <TableColumn fx:id="vorNameSpalte" prefWidth="75.0" text="Vorname" />
+                      <TableColumn fx:id="nachNameSpalte" prefWidth="120.0" text="Name" />
+                      <TableColumn fx:id="vorNameSpalte" prefWidth="120.0" text="Vorname" />
                         <TableColumn fx:id="anredeSpalte" prefWidth="75.0" text="Anrede" />
-                        <TableColumn fx:id="ortSpalte" prefWidth="75.0" text="Ort" />
+                        <TableColumn fx:id="kategorieSpalte" prefWidth="120.0" text="Kategorie" />
                     </columns>
                   </TableView>
                </children>

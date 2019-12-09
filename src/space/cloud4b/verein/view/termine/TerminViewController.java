@@ -65,7 +65,15 @@ public class TerminViewController {
     @FXML
     private TableColumn<Teilnehmer, StatusElement> anmeldeStatusSpalte;
     @FXML
-    private TableColumn<Teilnehmer, StatusElement> anwesenheitStatusSpalte;
+    private Hyperlink doodleHyperlink = new Hyperlink("Anwesenheiten bearbeiten");
+    @FXML
+    private Label angemeldetLabel = new Label();
+    @FXML
+    private Label vielleichtLabel = new Label();
+    @FXML
+    private Label neinLabel = new Label();
+    @FXML
+    private Label anzMitgliederLabel = new Label();
 
 
     private Stage dialogStage;
@@ -114,10 +122,44 @@ public class TerminViewController {
                 stundenVonSlider.setValue(Math.round(newVal.doubleValue())));
         stundenVonFeld.textProperty()
                 .bindBidirectional(stundenVonSlider.valueProperty(), new NumberStringConverter());
+        stundenVonFeld.setTextFormatter(new TextFormatter<Integer>(change -> {
+            // Deletion should always be possible.
+            if (change.isDeleted()) {
+                return change;
+            }
+
+            // How would the text look like after the change?
+            String txt = change.getControlNewText();
+
+            // Try parsing and check if the result is in [0, 64].
+            try {
+                int n = Integer.parseInt(txt);
+                return 0 <= n && n <= 23 ? change : null;
+            } catch (NumberFormatException e) {
+                return null;
+            }
+        }));
         minutenVonSlider.valueProperty().addListener((obs, oldval, newVal) ->
                 minutenVonSlider.setValue(Math.round(newVal.doubleValue())));
         minutenVonFeld.textProperty()
                 .bindBidirectional(minutenVonSlider.valueProperty(), new NumberStringConverter());
+        minutenVonFeld.setTextFormatter(new TextFormatter<Integer>(change -> {
+            // Deletion should always be possible.
+            if (change.isDeleted()) {
+                return change;
+            }
+
+            // How would the text look like after the change?
+            String txt = change.getControlNewText();
+
+            // Try parsing and check if the result is in [0, 64].
+            try {
+                int n = Integer.parseInt(txt);
+                return 0 <= n && n <= 59 ? change : null;
+            } catch (NumberFormatException e) {
+                return null;
+            }
+        }));
 
         // Zeitangabe bis
         stundenBisSlider.setTooltip(new Tooltip("Hallo"));
@@ -130,6 +172,7 @@ public class TerminViewController {
         minutenBisFeld.textProperty()
                 .bindBidirectional(minutenBisSlider.valueProperty(), new NumberStringConverter());
         setTermin(terminListe.get(indexClosestToNow));
+        showTeilnehmerListe(terminListe.get(indexClosestToNow));
 
         // Teilnehmerkategorien
         Status kategorieI = new Status(2);
@@ -138,7 +181,11 @@ public class TerminViewController {
         comboBoxKategorieII.getItems().addAll(kategorieII.getElementsAsArrayList());
 
     }
-
+    // Hyperlink zum Doodle-Formular
+    @FXML
+    public void handleLinkToDoodle() {
+            mainApp.getMainController().showDoodle();
+    }
     public void terminAuswahlComboBoxAction() {
         setTermin(terminAuswahlComboBox.getValue());
         showTeilnehmerListe(terminAuswahlComboBox.getValue());
@@ -163,6 +210,12 @@ public class TerminViewController {
             stundenBisFeld.clear();
             minutenBisFeld.clear();
         }
+
+        // Tab Kontrolle/Planung
+        angemeldetLabel.setText(Integer.toString(DatabaseReader.getAnzAnmeldungen(termin)));
+        vielleichtLabel.setText(Integer.toString(DatabaseReader.getAnzVielleicht(termin)));
+        neinLabel.setText(Integer.toString(DatabaseReader.getAnzNein(termin)));
+        anzMitgliederLabel.setText(Integer.toString(DatabaseReader.readAnzahlMitglieder()));
      //   comboBoxKategorieI.getSelectionModel().select(termin.getKatIElement().getStatusElementKey());
     }
 
@@ -172,8 +225,6 @@ public class TerminViewController {
                 cellData -> cellData.getValue().getMitglied().getNachnameProperty());
         anmeldeStatusSpalte.setCellValueFactory(
                 cellData -> cellData.getValue().getAnmeldungProperty());
-        anwesenheitStatusSpalte.setCellValueFactory(
-                cellData -> cellData.getValue().getTeilnahmeProperty());
     }
 
 }

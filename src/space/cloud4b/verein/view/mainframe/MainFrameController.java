@@ -1,28 +1,20 @@
 package space.cloud4b.verein.view.mainframe;
 
-import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
-import space.cloud4b.verein.controller.AdressController;
-import space.cloud4b.verein.controller.KalenderController;
-import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
-import space.cloud4b.verein.services.Observer;
-import space.cloud4b.verein.view.browser.*;
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import space.cloud4b.verein.MainApp;
-import space.cloud4b.verein.model.verein.Verein;
-import sun.jvm.hotspot.gc_interface.G1YCType;
+import space.cloud4b.verein.controller.AdressController;
+import space.cloud4b.verein.controller.KalenderController;
+import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
+import space.cloud4b.verein.services.Observer;
+import space.cloud4b.verein.services.output.ExcelWriter;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -53,7 +45,9 @@ public class MainFrameController implements Observer {
     @FXML
     private MenuItem helpMenuItem;
     @FXML
-    private MenuItem helpMenuItemII;
+    private MenuItem linksammlungMenuItem;
+    @FXML
+    private MenuItem javaDocMenuItem;
     @FXML
     private Label titleLeftLabel;
     @FXML
@@ -72,6 +66,12 @@ public class MainFrameController implements Observer {
     private Menu mitgliederMenu;
     @FXML
     private Menu termineMenu;
+    @FXML
+    private Menu auswertungenMenu;
+    @FXML
+    private Menu exportMenu;
+    @FXML
+    private MenuItem mitgliederExcelMenuItem;
 
     /**
      * Is called by the main application to give a reference back to itself.
@@ -115,6 +115,16 @@ public class MainFrameController implements Observer {
         termineMenu.setGraphic(iconTxt);
         termineMenu.setText("Termine");
 
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.LINE_CHART, "14px");
+        iconTxt.setFill(Color.GRAY);
+        auswertungenMenu.setGraphic(iconTxt);
+        auswertungenMenu.setText("Analyse");
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.FILE_EXCEL_ALT, "14px");
+        iconTxt.setFill(Color.GRAY);
+        exportMenu.setGraphic(iconTxt);
+        exportMenu.setText("Exportieren");
+
         iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.BACKWARD,"14px");
         iconTxt.setFill(Color.GRAY);
        // iconTxt.setStyle("-fx-end-margin: 20px");
@@ -126,18 +136,26 @@ public class MainFrameController implements Observer {
         infoLabel.setGraphic(iconTxt);
         infoLabel.setText(System.getProperty("user.name"));
 
-        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.SIGN_OUT, "10px");
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.SIGN_OUT, "15px");
         iconTxt.setFill(Color.BLACK);
         exitMenuItem.setGraphic(iconTxt);
         exitMenuItem.setText("beenden");
 
-        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.INFO, "10px");
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.INFO, "15px");
         iconTxt.setFill(Color.BLACK);
         infoMenuItem.setGraphic(iconTxt);
 
-        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.QUESTION, "10px");
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.QUESTION, "15px");
         iconTxt.setFill(Color.BLACK);
         helpMenuItem.setGraphic(iconTxt);
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.LINK, "15px");
+        iconTxt.setFill(Color.BLACK);
+        linksammlungMenuItem.setGraphic(iconTxt);
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.CHROME, "15px");
+        iconTxt.setFill(Color.BLACK);
+        javaDocMenuItem.setGraphic(iconTxt);
 
         titleLeftLabel.setText("Module");
         vMenuBarLeftContainer.setSpacing(10);
@@ -174,6 +192,31 @@ public class MainFrameController implements Observer {
     }
 
     /**
+     * Oeffnet ein Browserfenster mit der JavaDoc
+     */
+    @FXML
+    private void handleJavaDoc() {
+        mainApp.getMainController().showJavaDoc();
+    }
+
+    /**
+     * Oeffnet ein Browserfenster mit der Linksammlung
+     */
+    @FXML
+    private void handleLinksammlung() {
+        mainApp.getMainController().showLinksammlung();
+    }
+
+    /**
+     * Oeffnet ein Browserfenster mit der Terminmatrix
+     */
+    @FXML
+    private void handleDoodle() {
+        mainApp.getMainController().showDoodle();
+    }
+
+
+    /**
      * Oeffnet das Fenster des Mitgliederbereichs
      */
     @FXML
@@ -182,11 +225,27 @@ public class MainFrameController implements Observer {
     }
 
     /**
+     * Oeffnet das Fenster des Mitgliederbereichs
+     */
+    @FXML
+    private void handleExportMitglieder() throws IOException {
+        ExcelWriter.exportMirgliederToExcel();
+    }
+
+    /**
      * Opens the birthday statistics.
      */
     @FXML
     private void handleShowBirthdayStatistics() {
         mainApp.showBirthdayStatistics();
+    }
+
+    /**
+     * Öffnet die Statistik Kat I
+     */
+    @FXML
+    private void handleShowKatIStatistics() {
+        mainApp.showMemberKatIStatistics();
     }
 
     /**

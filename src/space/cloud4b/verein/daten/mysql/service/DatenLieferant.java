@@ -1,5 +1,8 @@
 package space.cloud4b.verein.daten.mysql.service;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.chart.PieChart;
 import space.cloud4b.verein.services.connection.MysqlConnection;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.adressbuch.AdressBuch;
@@ -18,6 +21,31 @@ import java.util.*;
 
 public abstract class DatenLieferant {
 
+    /**
+     *
+     */
+    public static ObservableList<PieChart.Data> getDataForPieChart01() {
+        try (Connection conn = new MysqlConnection().getConnection();
+             Statement st = conn.createStatement()) {
+
+        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+
+            String query = (
+                    "SELECT COUNT(*) AS MembersCount, statusElement.StatusElementNameLong AS StatusLong, statusElement.StatusElementNameShort AS StatusShort FROM kontakt LEFT JOIN statusElement ON statusElement.StatusElementKey = kontakt.KontaktKategorieA WHERE statusElement.StatusId=2 GROUP BY statusElement.StatusElementKey"
+            );
+            ResultSet result = st.executeQuery(query);
+            while (result.next()) {
+                System.out.println(result.getString("StatusLong"));
+                pieChartData.add(new PieChart.Data(result.getString("StatusLong"), result.getInt("MembersCount")));
+
+            }
+            return pieChartData;
+        } catch (SQLException e) {
+            System.out.print(e);
+
+        }
+        return null;
+    }
     /**
      * Ermittelt verschiedene Daten zum übergebenen Status-Objekt und
      * ergänzt die entsprechenden Instanzvariabeln
