@@ -40,5 +40,3 @@ public class WebView001 extends Application {
 
     }
 }
-
-

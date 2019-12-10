@@ -1,30 +1,20 @@
 package space.cloud4b.verein.view.mainframe;
 
-import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
-import space.cloud4b.verein.controller.AdressController;
-import space.cloud4b.verein.controller.KalenderController;
-import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
-import space.cloud4b.verein.services.Observer;
-import space.cloud4b.verein.view.browser.*;
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import space.cloud4b.verein.MainApp;
-import space.cloud4b.verein.model.verein.Verein;
-import sun.jvm.hotspot.gc_interface.G1YCType;
+import space.cloud4b.verein.controller.AdressController;
+import space.cloud4b.verein.controller.KalenderController;
+import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
+import space.cloud4b.verein.services.Observer;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
