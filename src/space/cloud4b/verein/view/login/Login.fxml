@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="space.cloud4b.verein.model.verein.login.Login"
+            fx:controller="space.cloud4b.verein.view.login.Login"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>
