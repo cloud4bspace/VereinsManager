@@ -467,3 +467,31 @@ bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.loca
 KontaktId=36 | KontaktNachname=Kramer | KontaktVorname=Rosmarie | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=1990-06-10 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-09 19:56:06 | 
 ***** neu values from contact-object *****
 MitgliedId=36 | KontaktNachname=Kramer | KontaktVorname=Rosmarie | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-11-25 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=NA (na) | KontaktKategorieB=nicht eingeteilt (na) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 06:19:16.287 | Contact #4 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=1999-11-30 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-01 00:00:00 | 
+***** neu values from contact-object *****
+MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=null | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 06:19:30.835 | Contact #4 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=1999-11-30 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-01 00:00:00 | 
+***** neu values from contact-object *****
+MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=null | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 06:26:00.985 | Contact #4 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=1999-11-30 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-01 00:00:00 | 
+***** neu values from contact-object *****
+MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 06:29:51.678 | Contact #4 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-11 06:25:54 | 
+***** neu values from contact-object *****
+MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]

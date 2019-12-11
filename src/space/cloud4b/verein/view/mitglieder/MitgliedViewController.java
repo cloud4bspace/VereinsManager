@@ -406,6 +406,10 @@ public class MitgliedViewController implements Observer {
             errorMeldung += "Vorname ist ungültig!";
             isValid = false;
         }
+        if (geburtsdatumPicker.getValue() == null) {
+            errorMeldung += "Geburtsdatum darf nicht leer sein.";
+            isValid = false;
+        }
         if (plzFeld.getText() == null || plzFeld.getText().length() == 0) {
             errorMeldung += "Ungültige PLZ!";
         } else {
@@ -416,8 +420,9 @@ public class MitgliedViewController implements Observer {
                 errorMeldung += "PLZ muss eine Zahl sein!";
             }
         }
-
-        mainFrameController.setInfo(errorMeldung, "NOK", true);
+        if(!isValid && errorMeldung.length()>0) {
+            mainFrameController.setInfo(errorMeldung, "NOK", true);
+        }
         return isValid;
     }
 

@@ -97,7 +97,11 @@ public abstract class ExcelWriter extends Application {
                     .setCellValue(mitglied.getTelefon());
 
             Cell dateOfBirthCell = row.createCell(9);
-            dateOfBirthCell.setCellValue(mitglied.getGeburtsdatum().toString());
+            if(mitglied.getGeburtsdatum()!=null) {
+                dateOfBirthCell.setCellValue(mitglied.getGeburtsdatum().toString());
+            } else {
+                dateOfBirthCell.setCellValue("na");
+            }
             dateOfBirthCell.setCellStyle(dateCellStyle);
 
 
