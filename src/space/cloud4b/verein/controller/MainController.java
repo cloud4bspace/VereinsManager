@@ -27,6 +27,36 @@ public class MainController {
         stage.show();
     }
 
+    public void showJavaDoc() {
+        Stage stage = new Stage();
+        stage.setTitle("JavaDoc");
+        Scene scene = new Scene(new Browser("https://www.cloud4b.space/VereinsManager/Hilfe/JavaDoc/"), 750, 500, Color.web("#666970"));
+        stage.setScene(scene);
+        scene.getStylesheets().add("../css/BrowserToolbar.css");
+        //TODO Path to stylesheet not correct...
+        stage.show();
+    }
+
+    public void showLinksammlung() {
+        Stage stage = new Stage();
+        stage.setTitle("JavaDoc");
+        Scene scene = new Scene(new Browser("https://www.cloud4b.space/VereinsManager/Hilfe/bookmarks.html"), 750, 500, Color.web("#666970"));
+        stage.setScene(scene);
+        scene.getStylesheets().add("../view/css/BrowserToolbar.css");
+        //TODO Path to stylesheet not correct...
+        stage.show();
+    }
+
+    public void showDoodle() {
+        Stage stage = new Stage();
+        stage.setTitle("Doodle");
+        Scene scene = new Scene(new Browser("https://www.cloud4b.space/VereinsManager/Doodle/doodle.php"), 750, 500, Color.web("#666970"));
+        stage.setScene(scene);
+        scene.getStylesheets().add("../view/css/BrowserToolbar.css");
+        //TODO Path to stylesheet not correct...
+        stage.show();
+    }
+
     public void showInfo() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Vereins-App");

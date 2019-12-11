@@ -5,35 +5,31 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import space.cloud4b.verein.MainApp;
 import space.cloud4b.verein.controller.AdressController;
-import space.cloud4b.verein.controller.KalenderController;
-import space.cloud4b.verein.daten.mysql.service.DatenManipulator;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.status.Status;
 import space.cloud4b.verein.model.verein.status.StatusElement;
 import space.cloud4b.verein.services.DatabaseOperation;
+import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.xml.soap.Text;
-import java.io.*;
-import java.nio.file.LinkOption;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.Optional;
-import java.util.concurrent.ExecutionException;
 
 public class MitgliedViewController implements Observer {
 // Test Github
@@ -161,6 +157,25 @@ public class MitgliedViewController implements Observer {
         this.mainFrameController = mainFrameController;
     }
 
+
+    /**
+     * soll ein neueröffnetes Mitglied direkt selektieren aufgrund der neuen Key-ID
+     * TODO funktioniert nicht...
+     * @param mitgliedId
+     */
+    public void setMitglied(int mitgliedId) throws InterruptedException {
+        int i = 0;
+        Mitglied mitglied = null;
+        while(mitgliedArrayList.size() > i){
+            mitglied = mitgliedArrayList.get(i);
+            if(mitglied.getId() == mitgliedId){
+                setMitglied(mitglied);
+                return;
+            }
+            i++;
+        }
+    }
+
     /**
      * Setzt das zu editierende Mitglied in den Dialog
      *
@@ -264,7 +279,7 @@ public class MitgliedViewController implements Observer {
         // File newFile = new File("profilbild.png");
         // file.renameTo(newFile);
         Path src = Paths.get(file.getAbsolutePath());
-        Path dst = Paths.get("/Users/bernhardkaempf/Downloads/VereinsManager/ressources/images/profilbilder/ProfilBild_" + aktuellesMitglied.getId() + "." + extStr);
+        Path dst = Paths.get("../VereinsManager/ressources/images/profilbilder/ProfilBild_" + aktuellesMitglied.getId() + "." + extStr);
         try {
             java.nio.file.Files.copy(
                     src, dst, StandardCopyOption.COPY_ATTRIBUTES,
@@ -283,6 +298,7 @@ public class MitgliedViewController implements Observer {
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
+        mainApp.setMitgliedViewController(this);
         this.adressController = new AdressController(this);
         this.adressController.Attach(this);
         mitgliedTabelle.setItems(this.mainApp.getVerein().getAdressBuch().getMitgliederListe());
@@ -314,10 +330,10 @@ public class MitgliedViewController implements Observer {
         Optional<ButtonType> result = alert.showAndWait();
 
         if(result.get() == ButtonType.OK) {
-
+            DatabaseOperation.deleteMitglied(aktuellesMitglied);
             mitgliedTabelle.getItems().remove(mitgliedTabelle.getSelectionModel().getSelectedItem());
             // TODO Profilbild: move to delete
-            // TODO Löschung an MYSQL weitergeben
+
         }
     }
 
@@ -412,9 +428,11 @@ public class MitgliedViewController implements Observer {
             AdressController ac = (AdressController) o;
             Platform.runLater(new Runnable() { // TODO
                 @Override
-                public void run() { mitgliedTabelle.setItems(((AdressController) o).getMitgliederListe());;
+                public void run() { mitgliedTabelle.setItems(((AdressController) o).getMitgliederListe());
+                    mitgliedArrayList = DatabaseReader.getMitgliederAsArrayList();
                 }
             });
+
         }
     }
 }

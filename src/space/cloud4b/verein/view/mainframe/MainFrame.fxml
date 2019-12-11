@@ -19,7 +19,8 @@
                 <Menu fx:id="helpMenu" mnemonicParsing="false" text="Hilfe">
                      <items>
                         <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleHilfe" text="online Hilfe" />
-                        <MenuItem fx:id="helpMenuItemII" mnemonicParsing="false" text="Hilfe 2" />
+                        <MenuItem fx:id="linksammlungMenuItem" mnemonicParsing="false" onAction="#handleLinksammlung" text="Linksammlung" />
+                        <MenuItem fx:id="javaDocMenuItem" mnemonicParsing="false" onAction="#handleJavaDoc" text="Java Doc" />
                      </items></Menu>
                   <Menu fx:id="infoMenu" mnemonicParsing="false" text="Vereinsmanager">
                      <items>
@@ -53,7 +54,7 @@
       <VBox fx:id="vMenuBarLeftContainer" prefHeight="293.0" prefWidth="154.0" BorderPane.alignment="CENTER">
          <children>
             <MenuBar />
-            <Label fx:id="titleLeftLabel" text="Label" />
+            <Label fx:id="titleLeftLabel" text="Favoriten" />
             <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="27.0" prefWidth="163.0" text="Dashboard" />
             <MenuBar id="leftMenubar">
               <menus>
@@ -61,6 +62,8 @@
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#handleMitgliederbereich" text="Mitgliederbereich öffnen" />
                         <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Geburtstags-Statistik" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleShowKatIStatistics" text="Auswertung Kat I" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleExportMitglieder" text="nach Excel exportieren.." />
                      </items></Menu>
               </menus>
                <VBox.margin>
@@ -72,6 +75,7 @@
                 <Menu fx:id="termineMenu" mnemonicParsing="false" text="Termine">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#handleTerminbereich" text="Termine verwalten" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleDoodle" text="Doodle" />
                   </items>
                 </Menu>
               </menus>
@@ -87,8 +91,9 @@
             </MenuBar>
             <MenuBar id="leftMenubar">
               <menus>
-                <Menu mnemonicParsing="false" text="Auswertungen">
+                <Menu fx:id="auswertungenMenu" mnemonicParsing="false" text="Auswertungen">
                   <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleShowKatIStatistics" text="Mitgliederkategorien" />
                     <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Geburtstage" />
                   </items>
                 </Menu>
@@ -96,9 +101,9 @@
             </MenuBar>
             <MenuBar id="leftMenubar">
               <menus>
-                <Menu mnemonicParsing="false" text="Export">
+                <Menu fx:id="exportMenu" mnemonicParsing="false" text="Export">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem fx:id="mitgliederExcelMenuItem" mnemonicParsing="false" onAction="#handleExportMitglieder" text="Mitgliederliste (Excel)" />
                   </items>
                 </Menu>
               </menus>
@@ -111,7 +116,7 @@
       </VBox>
    </left>
    <bottom>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ToolBar maxHeight="30.0" prefHeight="30.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <items>
             <Label fx:id="dateLabel" text="Label" />
          </items>

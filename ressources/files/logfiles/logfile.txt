@@ -432,3 +432,38 @@ bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.loca
 KontaktId=34 | KontaktNachname=Test | KontaktVorname=Tet | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2018-02-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 20:05:39 | 
 ***** neu values from contact-object *****
 MitgliedId=34 | KontaktNachname=Test | KontaktVorname=Tet | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-12-05 | KontaktAnredeStatus=⚑ | NA | KontaktKategorieA=na | NA | KontaktKategorieB=na | NA | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-08 06:47:51.354 | Contact #23 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktPLZ=3060 | KontaktOrt=Seftigen | KontaktGeburtsdatum=1956-12-06 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2009-10-03 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 15:46:27 | 
+***** neu values from contact-object *****
+MitgliedId=23 | KontaktNachname=Fiechter | KontaktVorname=Oliver | KontaktAdresse=Thunstrasse 27 | KontaktAdresszusatz=null | KontaktOrt=Seftigen | KontaktPLZ=3060 | KontaktGeburtsdatum=1956-12-06 | KontaktAnredeStatus=Herr (♂) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-08 06:48:12.13 | Contact #29 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=29 | KontaktNachname=Brunner | KontaktVorname=Gaby | KontaktAdresse=Dorfplatz 23 | KontaktAdresszusatz=null | KontaktPLZ=3423 | KontaktOrt=Ersigen | KontaktGeburtsdatum=1972-04-18 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=1987-12-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=2 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 14:21:24 | 
+***** neu values from contact-object *****
+MitgliedId=29 | KontaktNachname=Brunner | KontaktVorname=Gaby | KontaktAdresse=Dorfplatz 23 | KontaktAdresszusatz=null | KontaktOrt=Ersigen | KontaktPLZ=3423 | KontaktGeburtsdatum=1972-04-18 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Kids (♬) | KontaktKategorieB=Gruppe B (B) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-08 06:49:19.344 | Contact #22 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=22 | KontaktNachname=Künzle | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=2019-12-09 | KontaktAnredeStatus=0 | KontaktEintrittsdatum=2019-12-04 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-06 16:31:51 | 
+***** neu values from contact-object *****
+MitgliedId=22 | KontaktNachname=Künzle | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=1956-12-09 | KontaktAnredeStatus=Herr (♂) | KontaktKategorieA=NA (na) | KontaktKategorieB=nicht eingeteilt (na) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-08 06:51:44.078 | Contact #35 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=35 | KontaktNachname=Kummer | KontaktVorname=Beat | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-10-01 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-08 06:50:54 | 
+***** neu values from contact-object *****
+MitgliedId=35 | KontaktNachname=Kummer | KontaktVorname=Beat | KontaktAdresse=Zurlindenstrasse 23 | KontaktAdresszusatz=null | KontaktOrt=Zürich | KontaktPLZ=8055 | KontaktGeburtsdatum=1997-12-17 | KontaktAnredeStatus=Herr (♂) | KontaktKategorieA=Talents | KontaktKategorieB=Gruppe B (B) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 05:38:51.669 | Contact #36 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=36 | KontaktNachname=Kramer | KontaktVorname=Rosmarie | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=null | KontaktAnredeStatus=null | KontaktEintrittsdatum=1990-06-10 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-09 19:56:06 | 
+***** neu values from contact-object *****
+MitgliedId=36 | KontaktNachname=Kramer | KontaktVorname=Rosmarie | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-11-25 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=NA (na) | KontaktKategorieB=nicht eingeteilt (na) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]

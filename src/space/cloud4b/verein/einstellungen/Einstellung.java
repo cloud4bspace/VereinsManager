@@ -25,7 +25,7 @@ public abstract class Einstellung {
         try {
             // Load Settings
             Properties loadProps = new Properties();
-            loadProps.loadFromXML(new FileInputStream("/Users/bernhardkaempf/Downloads/VereinsManager/src/space/cloud4b/verein/einstellungen/Mandanteneinstellungen.xml"));
+            loadProps.loadFromXML(new FileInputStream("../VereinsManager/src/space/cloud4b/verein/einstellungen/Mandanteneinstellungen.xml"));
             String propValue = loadProps.getProperty("VereinsName");
             return propValue;
         }

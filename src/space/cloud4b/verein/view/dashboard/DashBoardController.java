@@ -43,7 +43,7 @@ public class DashBoardController implements Observer {
     @FXML
     private TableColumn<Mitglied, StatusElement> anredeSpalte;
     @FXML
-    private TableColumn<Mitglied, String> ortSpalte;
+    private TableColumn<Mitglied, StatusElement> kategorieSpalte;
 
     @FXML
     private TableView<Termin> termineTabelle;
@@ -110,8 +110,8 @@ public class DashBoardController implements Observer {
                 cellData -> cellData.getValue().getNachnameProperty());
         anredeSpalte.setCellValueFactory(
                 cellData -> cellData.getValue().getAnredeProperty());
-        ortSpalte.setCellValueFactory(
-                cellData -> cellData.getValue().getOrtProperty());
+        kategorieSpalte.setCellValueFactory(
+                cellData -> cellData.getValue().getKategorieIElementProperty());
 
 
         // Terminliste initialisieren

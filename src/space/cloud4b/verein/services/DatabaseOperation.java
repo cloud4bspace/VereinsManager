@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
 public abstract class DatabaseOperation {
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm");
 
     /**
      * Erstellt die erforderlichen Tabellen für Adressen und Termine aus Tabellen-Vorlagen
@@ -41,7 +41,7 @@ public abstract class DatabaseOperation {
     /**
      * neues Mitglied in der Datenbank anlegen
      */
-    public static void saveNewMember(String nachname, String vorname, String eintrittsDatum){
+    public static int saveNewMember(String nachname, String vorname, String eintrittsDatum){
 
         String query= "INSERT INTO usr_web116_5.kontakt (KontaktId, KontaktNachname, " +
                     "KontaktVorname, KontaktEintrittsdatum, KontaktIstMitglied, KontaktTrackChangeUsr, " +
@@ -49,15 +49,40 @@ public abstract class DatabaseOperation {
         MysqlConnection conn = new MysqlConnection();
         PreparedStatement ps = null;
         try {
-            ps = conn.getConnection().prepareStatement(query);
+            ps = conn.getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, nachname);
             ps.setString(2, vorname);
             ps.setString(3, eintrittsDatum);
             ps.setString(4, System.getProperty("user.name"));
             System.out.println("neues Mitglied hinzugefügt: " + ps.executeUpdate());
+           // System.out.println(ps.getGeneratedKeys());
+            ResultSet keys = null;
+            keys = ps.getGeneratedKeys();
+            keys.next();
+            int newKey = keys.getInt(1);
+            return newKey;
 
     } catch(SQLException e) {
         System.out.println("Fehler " + e);
+        }
+        return 0;
+    }
+
+    /**
+     * Mitglied in den Datenbanken löschen
+     */
+    public static void deleteMitglied(Mitglied mitglied) {
+        try(Connection conn = new MysqlConnection().getConnection();
+            Statement st = conn.createStatement()) {
+            String query= "DELETE FROM kontakt WHERE KontaktId=" + mitglied.getId();
+            st.execute(query);
+
+
+            query = "DELETE FROM `terminkontrolle` WHERE `KontrolleMitgliedId` = " + mitglied.getId();
+            st.execute(query);
+
+        } catch(SQLException e) {
+            System.out.println("Mitglied konnte nicht gelöscht werden (" + e + ")");
         }
     }
 

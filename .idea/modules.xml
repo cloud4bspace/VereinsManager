@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VereinsManager.iml" filepath="$PROJECT_DIR$/VereinsManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonscsv/maiven.iml" filepath="$PROJECT_DIR$/commonscsv/maiven.iml" />
     </modules>
   </component>
 </project>

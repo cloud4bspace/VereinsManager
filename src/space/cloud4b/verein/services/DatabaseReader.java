@@ -37,6 +37,63 @@ public abstract class DatabaseReader {
     }
 
     /**
+     * ermittelt die anzahl angemeldete Teilnehmer zu einem Termin
+     */
+    public static int getAnzAnmeldungen(Termin termin) {
+        try (Connection conn = new MysqlConnection().getConnection();
+             Statement st = conn.createStatement()) {
+            String query = "SELECT COUNT(*) Anzahl FROM terminkontrolle WHERE KontrolleTerminId = "
+                    + termin.getTerminId() +  " AND KontrolleArt = 'Anmeldung' AND KontrolleWert = 1";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                return rs.getInt("Anzahl");
+            }
+        } catch (SQLException e) {
+            System.out.println("Anzahl Anmeldungen konnte nicht ermittelt werden ("+ e + ")");
+
+        }
+        return 0;
+    }
+
+    /**
+     * ermittelt die Anzahl der provisorisch angemeldeten Teilnehmer zu einem Termin
+     */
+    public static int getAnzVielleicht(Termin termin) {
+        try (Connection conn = new MysqlConnection().getConnection();
+             Statement st = conn.createStatement()) {
+            String query = "SELECT COUNT(*) Anzahl FROM terminkontrolle WHERE KontrolleTerminId = "
+                    + termin.getTerminId() +  " AND KontrolleArt = 'Anmeldung' AND KontrolleWert = 3";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                return rs.getInt("Anzahl");
+            }
+        } catch (SQLException e) {
+            System.out.println("Anzahl Vielleicht-Anmeldungen konnte nicht ermittelt werden ("+ e + ")");
+
+        }
+        return 0;
+    }
+
+    /**
+     * ermittelt die Anzahl der provisorisch angemeldeten Teilnehmer zu einem Termin
+     */
+    public static int getAnzNein(Termin termin) {
+        try (Connection conn = new MysqlConnection().getConnection();
+             Statement st = conn.createStatement()) {
+            String query = "SELECT COUNT(*) Anzahl FROM terminkontrolle WHERE KontrolleTerminId = "
+                    + termin.getTerminId() +  " AND KontrolleArt = 'Anmeldung' AND KontrolleWert = 2";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                return rs.getInt("Anzahl");
+            }
+        } catch (SQLException e) {
+            System.out.println("Anzahl Vielleicht-Anmeldungen konnte nicht ermittelt werden ("+ e + ")");
+
+        }
+        return 0;
+    }
+
+    /**
      * ermittelt die Teilnehmerliste zu einem Termin
      */
     public static ArrayList<Teilnehmer> getTeilnehmer(Termin termin) {

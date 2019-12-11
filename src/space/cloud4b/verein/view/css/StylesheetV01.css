@@ -46,6 +46,22 @@
 
 }
 
+.hyperlink {
+    -fx-background-color: black;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 5;
+    -fx-text-fill: white;
+    -fx-label-padding: 5;
+}
+#tabelleCellLabel {
+    -fx-text-fill: black;
+    -fx-alignment: right;
+}
+#tabelleCellLabelBold {
+    -fx-text-fill: black;
+    -fx-alignment: right;
+    -fx-font-weight: 900;
+}
 .context-menu {
     -fx-background-color: #ffffff;
     -fx-border-insets: 5;
