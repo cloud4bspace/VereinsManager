@@ -495,3 +495,38 @@ bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.loca
 KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-11 06:25:54 | 
 ***** neu values from contact-object *****
 MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 06:38:32.041 | Contact #4 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-11 06:29:45 | 
+***** neu values from contact-object *****
+MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-11 06:39:19.863 | Contact #4 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktPLZ=8230 | KontaktOrt=Wolfsberg | KontaktGeburtsdatum=2019-12-11 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-11-01 | KontaktAustrittsdatum=null | KontaktKategorieA=2 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 564 66 77 | KontaktTelefon=null | KontaktEMail=Marie.Bruderer@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-11 06:38:25 | 
+***** neu values from contact-object *****
+MitgliedId=4 | KontaktNachname=Bruderer | KontaktVorname=Marie | KontaktAdresse=Hauptstrasse 99 | KontaktAdresszusatz=c/o Kathrin Bruderer | KontaktOrt=Wolfsberg | KontaktPLZ=8230 | KontaktGeburtsdatum=1985-11-25 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Junioren (♫) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-12 06:46:04.881 | Contact #17 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=17 | KontaktNachname=Müller | KontaktVorname=Dominique | KontaktAdresse=Winterthurerstrasse 177 | KontaktAdresszusatz=null | KontaktPLZ=8400 | KontaktOrt=Winterthur | KontaktGeburtsdatum=1934-01-01 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=1956-01-01 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=2 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=+41 76 432 12 34 | KontaktTelefon=null | KontaktEMail=Dominique.Müller@gmail.com | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-01 00:00:00 | 
+***** neu values from contact-object *****
+MitgliedId=17 | KontaktNachname=Müller | KontaktVorname=Dominique | KontaktAdresse=Winterthurerstrasse 177 | KontaktAdresszusatz=null | KontaktOrt=Winterthur | KontaktPLZ=8400 | KontaktGeburtsdatum=1934-10-06 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Kids (♬) | KontaktKategorieB=Gruppe B (B) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-12 06:46:42.694 | Contact #22 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=22 | KontaktNachname=Künzle | KontaktVorname=Peter | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=0 | KontaktOrt=null | KontaktGeburtsdatum=1956-12-09 | KontaktAnredeStatus=1 | KontaktEintrittsdatum=2019-12-04 | KontaktAustrittsdatum=null | KontaktKategorieA=0 | KontaktKategorieB=0 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-08 06:49:24 | 
+***** neu values from contact-object *****
+MitgliedId=22 | KontaktNachname=Künzle | KontaktVorname=Peter | KontaktAdresse=Waldweg 99 | KontaktAdresszusatz=null | KontaktOrt=Affoltern | KontaktPLZ=2300 | KontaktGeburtsdatum=1956-12-09 | KontaktAnredeStatus=Herr (♂) | KontaktKategorieA=Senioren | KontaktKategorieB=Gruppe B (B) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+
+***** 2019-12-12 06:47:33.871 | Contact #56 UPDATE *****
+bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
+***** old values in mysql-db *****
+KontaktId=56 | KontaktNachname=Elmer | KontaktVorname=Kurt | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktPLZ=null | KontaktOrt=null | KontaktGeburtsdatum=1900-01-01 | KontaktAnredeStatus=null | KontaktEintrittsdatum=2019-11-25 | KontaktAustrittsdatum=null | KontaktKategorieA=null | KontaktKategorieB=null | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-11 07:00:32 | 
+***** neu values from contact-object *****
+MitgliedId=56 | KontaktNachname=Elmer | KontaktVorname=Kurt | KontaktAdresse=Zürichstrasse 4 | KontaktAdresszusatz=null | KontaktOrt=Kirchberg | KontaktPLZ=3422 | KontaktGeburtsdatum=1945-02-12 | KontaktAnredeStatus=Herr (♂) | KontaktKategorieA=Senioren | KontaktKategorieB=Gruppe C (C) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]

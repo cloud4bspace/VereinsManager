@@ -1,6 +1,7 @@
 package space.cloud4b.verein.services;
 
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
+import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.services.connection.MysqlConnection;
 
 import java.io.BufferedWriter;
@@ -49,5 +50,9 @@ public abstract class LogWriter {
             //exception handling left as an exercise for the reader
         }
 
+    }
+
+    public static void writeTerminUpdateLog(Termin termin) {
+        //TOT
     }
 }

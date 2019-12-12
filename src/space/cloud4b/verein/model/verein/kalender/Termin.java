@@ -5,17 +5,12 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableValue;
-import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.kontrolle.Meldung;
 import space.cloud4b.verein.model.verein.status.StatusElement;
 
-import javax.swing.text.DateFormatter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
@@ -53,6 +48,7 @@ public class Termin {
     }
 
     // Termindatum
+    public void setDatum(LocalDate datum) { this.terminDatum = datum; }
     public LocalDate getDatum(){
         return terminDatum;
     }
@@ -74,10 +70,14 @@ public class Termin {
     // Zeit von
     public void setZeit(LocalDateTime terminZeit) {
         this.terminZeit = terminZeit;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        this.zeitText = terminZeit.format(formatter);
-        if(this.terminZeitBis!=null) {
-            this.zeitText += ":" + terminZeitBis.format(formatter);
+        if(terminZeit != null) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+            this.zeitText = terminZeit.format(formatter);
+            if (this.terminZeitBis != null) {
+                this.zeitText += ":" + terminZeitBis.format(formatter);
+            }
+        } else {
+            this.zeitText = null;
         }
     }
     public LocalDateTime getTerminZeitVon(){ return this.terminZeit; }
@@ -85,8 +85,12 @@ public class Termin {
     // Zeit bis
     public void setZeitBis(LocalDateTime terminZeitBis) {
         this.terminZeitBis = terminZeitBis;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        this.zeitText = terminZeit.format(formatter) + "-" + terminZeitBis.format(formatter);
+        if(terminZeitBis != null) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+            this.zeitText = terminZeit.format(formatter) + "-" + terminZeitBis.format(formatter);
+        } else {
+            this.zeitText = null;
+        }
     }
     public LocalDateTime getTerminZeitBis(){ return this.terminZeitBis; }
 
