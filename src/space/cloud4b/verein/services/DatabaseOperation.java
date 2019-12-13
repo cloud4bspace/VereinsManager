@@ -231,4 +231,36 @@ public abstract class DatabaseOperation {
         }
 
     }
+
+    /**
+     * legt in der MySql-Datenbank einen neuen Termin an mit den übergebenen Werten
+     * @param terminText Bezeichnung des Termins
+     * @param terminDatum Datum des Termins
+     * @return gibt die Id des neuen Datensatzes zurück
+     */
+    public static int saveNewTermin(String terminText, String terminDatum) {
+
+        String query= "INSERT INTO usr_web116_5.termin (TerminId, TerminDatum, TerminText, " +
+                "TerminTrackChangeUsr, " +
+                "TerminTrackChangeTimestamp) VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP)";
+        MysqlConnection conn = new MysqlConnection();
+        PreparedStatement ps = null;
+        try {
+            ps = conn.getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, terminDatum);
+            ps.setString(2, terminText);
+            ps.setString(3, System.getProperty("user.name"));
+            System.out.println("neuer Temin hinzugefügt: " + ps.executeUpdate());
+            // System.out.println(ps.getGeneratedKeys());
+            ResultSet keys = null;
+            keys = ps.getGeneratedKeys();
+            keys.next();
+            int newKey = keys.getInt(1);
+            return newKey;
+
+        } catch(SQLException e) {
+            System.out.println("Fehler " + e);
+        }
+        return 0;
+    }
 }

@@ -23,12 +23,12 @@
             <children>
                 <Label text="Bezeichnung" GridPane.rowIndex="1" />
                 <Label text="Datum" />
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <DatePicker GridPane.columnIndex="1" />
+                <TextField fx:id="terminTextFeld" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <DatePicker fx:id="terminDatumPicker" GridPane.columnIndex="1" />
                 <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <children>
                         <Button mnemonicParsing="false" onAction="#handleAbbrechen" text="abbrechen" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" text="speichern">
+                        <Button mnemonicParsing="false" onAction="#handleSpeichern" text="speichern">
                             <HBox.margin>
                                 <Insets left="10.0" />
                             </HBox.margin>

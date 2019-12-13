@@ -82,9 +82,9 @@
             </MenuBar>
             <MenuBar id="leftMenubar">
               <menus>
-                <Menu mnemonicParsing="false" text="Sitzungen">
+                <Menu mnemonicParsing="false" text="Kontrollen">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleKontrolle" text="Präsenzkontrolle" />
                   </items>
                 </Menu>
               </menus>
