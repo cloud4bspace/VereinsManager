@@ -233,6 +233,15 @@ public class MainFrameController implements Observer {
     }
 
     /**
+     * Oeffnet ein Browserfenster mit der Präsenzkontrolle
+     */
+    @FXML
+    private void handleKontrolle() {
+        mainApp.getMainController().showKontrolle();
+    }
+
+
+    /**
      * Oeffnet das Fenster des Mitgliederbereichs
      */
     @FXML

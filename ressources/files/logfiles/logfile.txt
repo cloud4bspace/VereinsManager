@@ -468,6 +468,7 @@ KontaktId=36 | KontaktNachname=Kramer | KontaktVorname=Rosmarie | KontaktAdresse
 ***** neu values from contact-object *****
 MitgliedId=36 | KontaktNachname=Kramer | KontaktVorname=Rosmarie | KontaktAdresse=null | KontaktAdresszusatz=null | KontaktOrt=null | KontaktPLZ=0 | KontaktGeburtsdatum=2019-11-25 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=NA (na) | KontaktKategorieB=nicht eingeteilt (na) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
 
+
 ***** 2019-12-11 06:19:16.287 | Contact #4 UPDATE *****
 bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.local|169.254/16|*.169.254/16
 ***** old values in mysql-db *****
@@ -551,3 +552,4 @@ bernhardkaempf | /Users/bernhardkaempf | Mac OS X | Europe/Zurich | local|*.loca
 KontaktId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktPLZ=3400 | KontaktOrt=Thun | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=2 | KontaktEintrittsdatum=2019-12-03 | KontaktAustrittsdatum=null | KontaktKategorieA=1 | KontaktKategorieB=1 | KontaktIstMitglied=1 | KontaktIstVorstandsmitglied=0 | KontaktBemerkungen=null | KontaktMobile=null | KontaktTelefon=null | KontaktEMail=null | KontaktEMailII=null | KontaktTrackChangeUsr=bernhardkaempf | KontaktTrackChangeTimestamp=2019-12-13 18:57:26 | 
 ***** neu values from contact-object *****
 MitgliedId=27 | KontaktNachname=Aebi | KontaktVorname=Kathrin | KontaktAdresse=Birkenweg 187 | KontaktAdresszusatz= | KontaktOrt=Thun | KontaktPLZ=3400 | KontaktGeburtsdatum=2019-12-06 | KontaktAnredeStatus=Frau (♀) | KontaktKategorieA=Kids (♬) | KontaktKategorieB=Gruppe A (A) | KontaktIstVorstandsmitglied=BooleanProperty [value: false]
+

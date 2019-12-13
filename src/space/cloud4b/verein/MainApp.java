@@ -289,7 +289,9 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/termine/TerminNeuView.fxml"));
+
             AnchorPane page = loader.load();
+
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Termin erfassen");
             dialogStage.initModality(Modality.WINDOW_MODAL);
