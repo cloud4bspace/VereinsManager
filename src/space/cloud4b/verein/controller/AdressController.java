@@ -5,14 +5,11 @@ import javafx.collections.ObservableList;
 import space.cloud4b.verein.MainApp;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.kalender.Jubilaeum;
-import space.cloud4b.verein.services.DatabaseOperation;
 import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.services.Subject;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
-import space.cloud4b.verein.view.mainframe.MainFrameController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
-import sun.applet.Main;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

@@ -17,6 +17,7 @@ import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.services.Observer;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -35,6 +36,7 @@ public class MitgliedViewController implements Observer {
 // Test Github
     private ArrayList<Observer> observerList;
     AdressController adressController;
+
     boolean unsavedChanges = false;
 
     @FXML
