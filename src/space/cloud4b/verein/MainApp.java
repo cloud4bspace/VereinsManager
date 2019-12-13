@@ -37,6 +37,8 @@ public class MainApp extends Application {
         verein = new Verein(Einstellung.getVereinsName());
 
     }
+    //TODO Login
+    
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
