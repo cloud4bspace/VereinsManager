@@ -175,8 +175,6 @@ public class TerminViewController {
         comboBoxKategorieI.getItems().addAll(kategorieI.getElementsAsArrayList());
         comboBoxKategorieII.getItems().addAll(kategorieII.getElementsAsArrayList());
 
-
-
     }
     // Hyperlink zum Doodle-Formular
     @FXML
@@ -209,6 +207,7 @@ public class TerminViewController {
             minutenBisFeld.clear();
         }
 
+
         if(termin.getKatIElement()!=null) {
             comboBoxKategorieI.getSelectionModel().select(termin.getKatIElement());
         }
@@ -231,6 +230,7 @@ public class TerminViewController {
                 cellData -> cellData.getValue().getMitglied().getNachnameProperty());
         anmeldeStatusSpalte.setCellValueFactory(
                 cellData -> cellData.getValue().getAnmeldungProperty());
+
        teilnehmerTabelle.setRowFactory(row -> new TableRow<Teilnehmer>() {
             @Override
             public void updateItem(Teilnehmer item, boolean empty) {
@@ -329,6 +329,7 @@ public class TerminViewController {
             mainFrameController.setInfo(errorMeldung, "NOK", true);
         }
         return isValid;
+
     }
 
 

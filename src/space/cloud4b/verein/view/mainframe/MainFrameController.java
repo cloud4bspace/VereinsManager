@@ -164,8 +164,6 @@ public class MainFrameController implements Observer {
         iconTxt.setFill(Color.BLACK);
         javaDocMenuItem.setGraphic(iconTxt);
 
-
-
         titleLeftLabel.setText("Module");
         vMenuBarLeftContainer.setSpacing(10);
 
@@ -224,6 +222,7 @@ public class MainFrameController implements Observer {
         mainApp.getMainController().showDoodle();
     }
 
+
     /**
      * Oeffnet ein Browserfenster mit der Präsenzkontrolle
      */
@@ -231,6 +230,7 @@ public class MainFrameController implements Observer {
     private void handleKontrolle() {
         mainApp.getMainController().showKontrolle();
     }
+
 
     /**
      * Oeffnet das Fenster des Mitgliederbereichs
