@@ -211,8 +211,12 @@ public class TerminViewController {
             minutenBisFeld.clear();
         }
 
-        comboBoxKategorieI.getSelectionModel().select(termin.getKatIElement().getStatusElementKey());
-        comboBoxKategorieII.getSelectionModel().select(termin.getKatIIElement().getStatusElementKey());
+        if(termin.getKatIElement()!=null) {
+            comboBoxKategorieI.getSelectionModel().select(termin.getKatIElement());
+        }
+        if(termin.getKatIIElement()!=null) {
+            comboBoxKategorieII.getSelectionModel().select(termin.getKatIIElement());
+        }
 
 
         // Tab Kontrolle/Planung
@@ -229,16 +233,21 @@ public class TerminViewController {
                 cellData -> cellData.getValue().getMitglied().getNachnameProperty());
         anmeldeStatusSpalte.setCellValueFactory(
                 cellData -> cellData.getValue().getAnmeldungProperty());
-        /* TODO funktioniert leider nicht..
-        teilnehmerTabelle.setRowFactory(tv -> new TableRow<Teilnehmer>(){
-            public void updateItem(Teilnehmer teilnnehmer) {
-                if(teilnnehmer.getAnmeldungWert() == 1){
-                    setStyle("-fx-background-color: green");
-                } else {
-                    setStyle("-fx-background-color: tomato");
+       teilnehmerTabelle.setRowFactory(row -> new TableRow<Teilnehmer>() {
+            @Override
+            public void updateItem(Teilnehmer item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item == null) {
+                    setStyle("");
+                } else if (item.getAnmeldungWert() == 1) {
+                    setStyle("-fx-background-color: rgba(0,251,0,0.17);");
+                } else if (item.getAnmeldungWert() == 2) {
+                    setStyle("-fx-background-color: rgba(255,0,0,0.15);");
+                } else if (item.getAnmeldungWert() == 3) {
+                    setStyle("-fx-background-color: rgba(255,165,0,0.2);");
                 }
             }
-        });*/
+        });
     }
 
     /**

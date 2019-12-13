@@ -30,5 +30,11 @@ public class Teilnehmer {
     }
 
     public ObjectProperty<StatusElement> getTeilnahmeProperty() { return new SimpleObjectProperty<StatusElement>(this.teilnahmeStatus); }
-    public int getAnmeldungWert() { return anmeldeStatus.getStatusElementKey();}
+    public int getAnmeldungWert() {
+        if(this.anmeldeStatus != null) {
+            return anmeldeStatus.getStatusElementKey();
+        } else {
+            return 0;
+        }
+    }
 }
