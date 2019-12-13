@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="space.cloud4b.verein.view.login.Login"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.cloud4b.verein.view.login.Login">
+   <children>
+      <AnchorPane prefHeight="138.0" prefWidth="600.0" styleClass="topPane" stylesheets="@../css/Login.css" />
+      <AnchorPane layoutX="126.0" layoutY="44.0" prefHeight="312.0" prefWidth="349.0" styleClass="cardPane" stylesheets="@../css/Login.css">
+         <children>
+            <ImageView fitHeight="109.0" fitWidth="111.0" layoutX="121.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Desktop/customer-login-icon-2.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="110.0" layoutY="267.0" mnemonicParsing="false" styleClass="topPane" stylesheets="@../css/Login.css" text="Button" textFill="WHITE" />
+            <PasswordField layoutX="110.0" layoutY="213.0" />
+            <Label layoutX="34.0" layoutY="218.0" text="Passwort" />
+            <TextField layoutX="110.0" layoutY="164.0" />
+            <Label layoutX="34.0" layoutY="169.0" text="Benutzer" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
