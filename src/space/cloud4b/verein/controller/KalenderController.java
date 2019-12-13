@@ -47,7 +47,7 @@ public class KalenderController implements Subject  {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
 
-                };
+                }
             }
         };
         Thread thread = new Thread(checkMysqlRunner);

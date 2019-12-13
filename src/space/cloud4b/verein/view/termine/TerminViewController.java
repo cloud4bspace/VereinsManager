@@ -101,10 +101,10 @@ public class TerminViewController {
             // wenn heute, dann dieses, sonst das nächste after
             if(terminListe.get(i).getDatum().isEqual(LocalDate.now())){
                 indexClosestToNow = i;
-            };
+            }
             if(terminListe.get(i).getDatum().isAfter(LocalDate.now())) {
                 indexClosestToNow = i;
-            };
+            }
             i++;
         }
         terminAuswahlComboBox.getItems().addAll(terminListe);

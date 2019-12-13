@@ -86,7 +86,7 @@ public class AdressController implements Subject {
 
                 } catch (InterruptedException e) {
 
-                };
+                }
             }
         };
         Thread thread = new Thread(blinkRunner);

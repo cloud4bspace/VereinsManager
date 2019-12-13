@@ -66,7 +66,7 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class
                     .getResource("view/mainframe/MainFrame.fxml"));
-            mainFrame = (BorderPane) loader.load();
+            mainFrame = loader.load();
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainFrame);
@@ -90,7 +90,7 @@ public class MainApp extends Application {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/dashboard/DashBoard.fxml"));
-            AnchorPane dashBoard = (AnchorPane) loader.load();
+            AnchorPane dashBoard = loader.load();
             dashBoard.setPadding(new Insets(10,10,10,10));
             // Set person overview into the center of root layout.
             mainFrame.setCenter(dashBoard);
@@ -112,7 +112,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/mitglieder/MitgliedView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();
@@ -144,7 +144,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/termine/TerminView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();
@@ -174,7 +174,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/chart/BirthdayStatistics.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Birthday Statistics");
             dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -201,7 +201,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/chart/MemberStatistics01.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Auswertung Mitglieder nach Kat I");
             dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -228,7 +228,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/mitglieder/MitgliedNeuView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Mitglied erfassen");
             dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -258,7 +258,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/termine/TerminNeuView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Termin erfassen");
             dialogStage.initModality(Modality.WINDOW_MODAL);

@@ -427,7 +427,6 @@ public abstract class DatabaseReader {
                     int alter = jahr - geburtsJahr;
                     geburtsDatum = jahr + geburtsDatum.substring(4, 10);
                     System.out.println("GebdiesesJahr: " + geburtsDatum);
-                    ;
                     LocalDate geburtsDatumLD = Date.valueOf(geburtsDatum).toLocalDate();
                     // Wenn der nächste Geburtstag grösser ist als heute
 
