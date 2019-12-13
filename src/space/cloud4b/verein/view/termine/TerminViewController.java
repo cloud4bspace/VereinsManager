@@ -16,6 +16,7 @@ import space.cloud4b.verein.services.DatabaseReader;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -72,7 +73,6 @@ public class TerminViewController {
     @FXML
     private Label anzMitgliederLabel = new Label();
 
-
     private Stage dialogStage;
     private MainFrameController mainFrameController;
     private KalenderController kalenderController = new KalenderController();
@@ -80,12 +80,10 @@ public class TerminViewController {
     private ArrayList<Termin> terminListe = new ArrayList<>();
     private Termin termin = null;
 
-
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
      /*   this.kalenderController = new KalenderController(this);
         this.kalenderController.Attach(this);*/
-
 
     }
     public void setMainFrameController(MainFrameController mainFrameController) {
@@ -251,6 +249,13 @@ public class TerminViewController {
     }
 
     /**
+     * neuen Termin erfassen
+     */
+    public void handleErfassenButton() {
+        mainApp.showTerminErfassen();
+    }
+
+    /**
      * Den aktuellen Termin neu laden, wenn der Reset-Button betätigt wird.
      */
     public void handleResetButton() {
@@ -291,8 +296,13 @@ public class TerminViewController {
             termin.setDetails(terminDetails.getText());
             termin.setTeilnehmerKatI(comboBoxKategorieI.getValue());
             termin.setTeilnehmerKatII(comboBoxKategorieII.getValue());
-
+            termin.setTrackChangeTimestamp(Timestamp.valueOf(LocalDateTime.now()));
+            termin.setTrackChangeUsr(System.getProperty("user.name"));
             DatabaseOperation.updateTermin(termin);
+            letzteAenderungLabel.setText(termin.getLetzteAenderung());
+            terminAuswahlComboBox.getItems().addAll(kalenderController.getTermineAsArrayList());
+            //terminAuswahlComboBox.getSelectionModel().clearAndSelect(termin);
+            terminAuswahlComboBox.getSelectionModel().select(termin);
             mainFrameController.setInfo("Änderungen gespeichert", "OK", true);
         }
     }

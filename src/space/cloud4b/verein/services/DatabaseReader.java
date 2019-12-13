@@ -104,6 +104,8 @@ public abstract class DatabaseReader {
         try (Connection conn = new MysqlConnection().getConnection();
              Statement st = conn.createStatement()) {
             String query = "SELECT kontakt.KontaktId, kontakt.KontaktNachname, kontakt.KontaktVorname FROM terminkontrolle LEFT JOIN kontakt ON kontakt.KontaktId = KontrolleMitgliedId WHERE KontrolleArt = 'Anmeldung' AND KontrolleTerminId = " + terminId + " GROUP BY KontrolleMitgliedId";
+            //KontrolleArt = 'Anmeldung' TODO: Einschränkung evtl. weglassen...
+
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 teilnehmerListe.add(
