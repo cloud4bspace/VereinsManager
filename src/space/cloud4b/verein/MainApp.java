@@ -19,6 +19,7 @@ import space.cloud4b.verein.view.dashboard.DashBoardController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 import space.cloud4b.verein.view.mitglieder.MitgliedNeuViewController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
+import space.cloud4b.verein.view.termine.TerminNeuViewController;
 import space.cloud4b.verein.view.termine.TerminViewController;
 
 import java.io.IOException;
@@ -248,6 +249,37 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Öffnet einen Dialog zum Erfassen eines neuen Termins
+     */
+    public void showTerminErfassen() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/termine/TerminNeuView.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Termin erfassen");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            TerminNeuViewController controller = loader.getController();
+            controller.setMainApp(this);
+            controller.setStage(dialogStage);
+            // controller.setPersonData(contactData);
+            //controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * Gibt den Haupt-Stage (primaryStage) zurück

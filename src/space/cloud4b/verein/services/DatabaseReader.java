@@ -103,7 +103,9 @@ public abstract class DatabaseReader {
         int terminId = termin.getTerminId();
         try (Connection conn = new MysqlConnection().getConnection();
              Statement st = conn.createStatement()) {
-            String query = "SELECT kontakt.KontaktId, kontakt.KontaktNachname, kontakt.KontaktVorname FROM terminkontrolle LEFT JOIN kontakt ON kontakt.KontaktId = KontrolleMitgliedId WHERE KontrolleTerminId = " + terminId + " GROUP BY KontrolleMitgliedId";
+            String query = "SELECT kontakt.KontaktId, kontakt.KontaktNachname, kontakt.KontaktVorname FROM terminkontrolle LEFT JOIN kontakt ON kontakt.KontaktId = KontrolleMitgliedId WHERE KontrolleArt = 'Anmeldung' AND KontrolleTerminId = " + terminId + " GROUP BY KontrolleMitgliedId";
+            //KontrolleArt = 'Anmeldung' TODO: Einschränkung evtl. weglassen...
+
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 teilnehmerListe.add(
@@ -144,11 +146,8 @@ public abstract class DatabaseReader {
             return teilnehmerListe;
         } catch (SQLException e) {
             System.out.println("Anzahl Termine konnte nicht ermittelt werden ("+ e + ")");
-
-        } finally {
             return teilnehmerListe;
         }
-
     }
 
     /**
@@ -341,6 +340,8 @@ public abstract class DatabaseReader {
     }
 
     public static ArrayList<Termin> getTermineAsArrayList(){
+        Status kategorieIStatus = new Status(2);
+        Status kategorieIIStatus = new Status(4);
         ArrayList<Termin> terminListe = new ArrayList<>();
         try (Connection conn = new MysqlConnection().getConnection(); Statement st = conn.createStatement()) {
             String query = "SELECT * from usr_web116_5.termin ORDER BY TerminDatum ASC";
@@ -372,6 +373,12 @@ public abstract class DatabaseReader {
                 }
                 if(rs.getString("TerminDetails") != null){
                     termin.setDetails(rs.getString("TerminDetails"));
+                }
+                if(rs.getInt("TerminTeilnehmerKatA") >=0) {
+                    termin.setTeilnehmerKatI(kategorieIStatus.getStatusElemente().get(rs.getInt("TerminTeilnehmerKatA")));
+                }
+                if(rs.getInt("TerminTeilnehmerKatB") >=0) {
+                    termin.setTeilnehmerKatII(kategorieIIStatus.getStatusElemente().get(rs.getInt("TerminTeilnehmerKatB")));
                 }
                 if(rs.getString("TerminTrackChangeUsr") != null){
                     termin.setTrackChangeUsr(rs.getString("TerminTrackChangeUsr"));

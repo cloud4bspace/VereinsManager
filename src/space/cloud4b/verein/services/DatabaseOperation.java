@@ -1,11 +1,13 @@
 package space.cloud4b.verein.services;
 
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
+import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.services.connection.MysqlConnection;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public abstract class DatabaseOperation {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm");
@@ -98,8 +100,6 @@ public abstract class DatabaseOperation {
         } catch(SQLException e) {
 
         }
-
-
     }
 
     /**
@@ -177,5 +177,90 @@ public abstract class DatabaseOperation {
             e.printStackTrace();
         }
 
+    }
+
+    /**
+     * Das Übergebene Objekt vom Typ Termin wird in der Termin-Tabelle aktualisiert
+     * @param termin der geänderte Termin
+     */
+    public static void updateTermin(Termin termin) {
+        LogWriter.writeTerminUpdateLog(termin);
+        MysqlConnection conn = new MysqlConnection();
+
+        // create the java mysql update preparedstatement
+        String query = "UPDATE usr_web116_5.termin SET TerminDatum = ?,"
+                + " TerminText = ?,"
+                + " TerminOrt = ?,"
+                + " TerminDetails = ?,"
+                + " TerminZeit = ?,"
+                + " TerminZeitBis = ?," // 6
+                + " TerminTeilnehmerKatA = ?, "
+                + " TerminTeilnehmerKatB = ?, "
+                + " TerminTrackChangeUsr = ?,"
+                + " TerminTrackChangeTimestamp = CURRENT_TIMESTAMP"
+                + " WHERE TerminId = ?";
+        //einzelne Änderungen abfragen und dann Wert alt und neu, User und Timestamp in logdatei schreiben
+        PreparedStatement preparedStmt = null;
+        try {
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+            preparedStmt = conn.getConnection().prepareStatement(query);
+            preparedStmt.setString(1, termin.getDatum().toString());
+            preparedStmt.setString(2, termin.getTerminText().getValue());
+            preparedStmt.setString(3, termin.getOrt());
+            preparedStmt.setString(4, termin.getDetails());
+            if(termin.getTerminZeitVon() == null) {
+                preparedStmt.setString(5, "");
+            } else {
+                preparedStmt.setString(5, termin.getTerminZeitVon().format(formatter));
+            }
+            if(termin.getTerminZeitBis() == null) {
+                preparedStmt.setString(6, "");
+            } else {
+                preparedStmt.setString(6, termin.getTerminZeitBis().format(formatter));
+            }
+            preparedStmt.setInt(7, termin.getKatIElement().getStatusElementKey());
+            preparedStmt.setInt(8, termin.getKatIIElement().getStatusElementKey());
+            preparedStmt.setString(9, System.getProperty("user.name"));
+            preparedStmt.setInt(10, termin.getTerminId());
+            // execute the java preparedstatement
+            System.out.println("Rückmeldung preparedStmt: " + preparedStmt.executeUpdate());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * legt in der MySql-Datenbank einen neuen Termin an mit den übergebenen Werten
+     * @param terminText Bezeichnung des Termins
+     * @param terminDatum Datum des Termins
+     * @return gibt die Id des neuen Datensatzes zurück
+     */
+    public static int saveNewTermin(String terminText, String terminDatum) {
+
+        String query= "INSERT INTO usr_web116_5.termin (TerminId, TerminDatum, TerminText, " +
+                "TerminTrackChangeUsr, " +
+                "TerminTrackChangeTimestamp) VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP)";
+        MysqlConnection conn = new MysqlConnection();
+        PreparedStatement ps = null;
+        try {
+            ps = conn.getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, terminDatum);
+            ps.setString(2, terminText);
+            ps.setString(3, System.getProperty("user.name"));
+            System.out.println("neuer Temin hinzugefügt: " + ps.executeUpdate());
+            // System.out.println(ps.getGeneratedKeys());
+            ResultSet keys = null;
+            keys = ps.getGeneratedKeys();
+            keys.next();
+            int newKey = keys.getInt(1);
+            return newKey;
+
+        } catch(SQLException e) {
+            System.out.println("Fehler " + e);
+        }
+        return 0;
     }
 }

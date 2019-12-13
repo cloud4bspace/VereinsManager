@@ -67,6 +67,8 @@ public class MainFrameController implements Observer {
     @FXML
     private Menu termineMenu;
     @FXML
+    private Menu kontrolleMenu;
+    @FXML
     private Menu auswertungenMenu;
     @FXML
     private Menu exportMenu;
@@ -114,6 +116,11 @@ public class MainFrameController implements Observer {
         iconTxt.setFill(Color.GRAY);
         termineMenu.setGraphic(iconTxt);
         termineMenu.setText("Termine");
+
+        iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.CHECK, "14px");
+        iconTxt.setFill(Color.GRAY);
+        kontrolleMenu.setGraphic(iconTxt);
+        kontrolleMenu.setText("Kontrollen");
 
         iconTxt = GlyphsDude.createIcon(FontAwesomeIcon.LINE_CHART, "14px");
         iconTxt.setFill(Color.GRAY);
@@ -213,6 +220,15 @@ public class MainFrameController implements Observer {
     @FXML
     private void handleDoodle() {
         mainApp.getMainController().showDoodle();
+    }
+
+
+    /**
+     * Oeffnet ein Browserfenster mit der Präsenzkontrolle
+     */
+    @FXML
+    private void handleKontrolle() {
+        mainApp.getMainController().showKontrolle();
     }
 
 

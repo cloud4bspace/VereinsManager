@@ -67,5 +67,13 @@ public class MainController {
     }
 
 
-
+    public void showKontrolle() {
+        Stage stage = new Stage();
+        stage.setTitle("Präsenzkontrolle");
+        Scene scene = new Scene(new Browser("https://www.cloud4b.space/VereinsManager/Kontrolle/kontrolluebersicht.php"), 750, 500, Color.web("#666970"));
+        stage.setScene(scene);
+        scene.getStylesheets().add("../view/css/BrowserToolbar.css");
+        //TODO Path to stylesheet not correct...
+        stage.show();
+    }
 }

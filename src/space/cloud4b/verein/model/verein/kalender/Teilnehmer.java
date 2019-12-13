@@ -4,7 +4,6 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.model.verein.status.StatusElement;
-import sun.swing.MenuItemLayoutHelper;
 
 public class Teilnehmer {
     private Mitglied mitglied;
@@ -31,5 +30,11 @@ public class Teilnehmer {
     }
 
     public ObjectProperty<StatusElement> getTeilnahmeProperty() { return new SimpleObjectProperty<StatusElement>(this.teilnahmeStatus); }
-
+    public int getAnmeldungWert() {
+        if(this.anmeldeStatus != null) {
+            return anmeldeStatus.getStatusElementKey();
+        } else {
+            return 0;
+        }
+    }
 }
