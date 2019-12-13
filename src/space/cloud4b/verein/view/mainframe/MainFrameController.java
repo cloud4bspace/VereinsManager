@@ -77,7 +77,7 @@ public class MainFrameController implements Observer {
 
     /**
      * Is called by the main application to give a reference back to itself.
-     *
+     *  jhj
      * @param mainApp
      */
     public void setMainApp(MainApp mainApp) {
