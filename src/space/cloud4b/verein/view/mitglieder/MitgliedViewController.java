@@ -99,7 +99,7 @@ public class MitgliedViewController implements Observer {
 
     private Stage dialogStage;
     private MainFrameController mainFrameController;
-    private boolean okClicked = false; // TODO braucht es das?
+    private boolean okClicked = false; // TODO braucht es das noch?
     private MainApp mainApp;
     private Mitglied aktuellesMitglied = null;
     private ArrayList<Mitglied> mitgliedArrayList;

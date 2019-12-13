@@ -16,6 +16,7 @@ import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.view.chart.BirthdayStatisticsController;
 import space.cloud4b.verein.view.chart.MemberStatistics01Controller;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
+import space.cloud4b.verein.view.login.LoginController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 import space.cloud4b.verein.view.mitglieder.MitgliedNeuViewController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
@@ -45,8 +46,9 @@ public class MainApp extends Application {
         this.primaryStage.getIcons().add(new Image("file:ressources/images/address_book_32.png"));
         this.primaryStage.setMaximized(true);
         this.mainController = new MainController(this);
-        initMainFrame();
-        showDashboard();
+        initLogin();
+        // initMainFrame();
+        // showDashboard();
     }
 
     public void setMitgliedViewController(MitgliedViewController mitgliedViewController){
@@ -57,6 +59,36 @@ public class MainApp extends Application {
         return mitgliedViewController;
     }
 
+    /**
+     * Initialisiert das Login-Fenster
+     */
+    public void initLogin() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/login/Login.fxml"));
+            AnchorPane page = loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Login");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            LoginController controller = loader.getController();
+            controller.setMainApp(this);
+            controller.setStage(dialogStage);
+            // controller.setPersonData(contactData);
+            //controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     /**
      * Initialisiert das Hauptfenster
      */
@@ -79,7 +111,6 @@ public class MainApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
