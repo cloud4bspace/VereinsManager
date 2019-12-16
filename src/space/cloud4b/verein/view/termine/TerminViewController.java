@@ -101,10 +101,10 @@ public class TerminViewController {
             // wenn heute, dann dieses, sonst das nächste after
             if(terminListe.get(i).getDatum().isEqual(LocalDate.now())){
                 indexClosestToNow = i;
-            };
+            }
             if(terminListe.get(i).getDatum().isAfter(LocalDate.now())) {
                 indexClosestToNow = i;
-            };
+            }
             i++;
         }
         terminAuswahlComboBox.getItems().addAll(terminListe);
@@ -174,6 +174,8 @@ public class TerminViewController {
         Status kategorieII = new Status(4);
         comboBoxKategorieI.getItems().addAll(kategorieI.getElementsAsArrayList());
         comboBoxKategorieII.getItems().addAll(kategorieII.getElementsAsArrayList());
+
+
 
     }
     // Hyperlink zum Doodle-Formular
@@ -260,6 +262,78 @@ public class TerminViewController {
      */
     public void handleResetButton() {
         setTermin(termin);
+
+    }
+
+    /**
+     * überprüft die Daten und speichert sie
+     */
+    public void handleSpeichernButton() {
+        if (isInputValid()) {
+           // unsavedChanges = false;
+            System.out.println(terminDatumPicker.getValue());
+            System.out.println(termin);
+            System.out.println("Stunde: " + stundenVonFeld.getText());
+            System.out.println("Minute: " + minutenVonFeld.getText());
+            termin.setDatum(Date.valueOf(terminDatumPicker.getValue()).toLocalDate());
+
+            if(stundenVonFeld.getText().length() > 0 && minutenVonFeld.getText().length() > 0) {
+                termin.setZeit(LocalDateTime.of(terminDatumPicker.getValue(),
+                        LocalTime.of(Integer.parseInt(stundenVonFeld.getText()),
+                                Integer.parseInt(minutenVonFeld.getText()))));
+            } else {
+                termin.setZeit(null);
+            }
+
+            if(stundenBisFeld.getText().length() > 0 && minutenBisFeld.getText().length() > 0) {
+                termin.setZeitBis(LocalDateTime.of(terminDatumPicker.getValue(),
+                        LocalTime.of(Integer.parseInt(stundenBisFeld.getText()),
+                                Integer.parseInt(minutenBisFeld.getText()))));
+            } else {
+                termin.setZeitBis(null);
+            }
+            termin.setTerminText(terminText.getText());
+            termin.setTeilnehmerKatI(comboBoxKategorieI.getValue());
+            termin.setTeilnehmerKatII(comboBoxKategorieII.getValue());
+            termin.setOrt(terminOrt.getText());
+            termin.setDetails(terminDetails.getText());
+            termin.setTeilnehmerKatI(comboBoxKategorieI.getValue());
+            termin.setTeilnehmerKatII(comboBoxKategorieII.getValue());
+            termin.setTrackChangeTimestamp(Timestamp.valueOf(LocalDateTime.now()));
+            termin.setTrackChangeUsr(System.getProperty("user.name"));
+            DatabaseOperation.updateTermin(termin);
+            letzteAenderungLabel.setText(termin.getLetzteAenderung());
+            terminAuswahlComboBox.getItems().addAll(kalenderController.getTermineAsArrayList());
+            //terminAuswahlComboBox.getSelectionModel().clearAndSelect(termin);
+            terminAuswahlComboBox.getSelectionModel().select(termin);
+            mainFrameController.setInfo("Änderungen gespeichert", "OK", true);
+        }
+    }
+
+    /**
+     * Validates the user input in the text fields.
+     *
+     * @return true if the input is valid
+     */
+    private boolean isInputValid() {
+        String errorMeldung = "";
+        Boolean isValid = true;
+
+        if (terminDatumPicker == null) {
+            errorMeldung += "Datumsangabe ist ungültig!";
+            isValid = false;
+        }
+        if (terminText.getText() == null || terminText.getText().length() == 0) {
+            errorMeldung += "Text ungültig!";
+            isValid = false;
+        }
+
+        if(!isValid && errorMeldung.length()>0) {
+            mainFrameController.setInfo(errorMeldung, "NOK", true);
+        }
+        return isValid;
+    }
+
     }
 
     /**
@@ -331,6 +405,7 @@ public class TerminViewController {
         return isValid;
 
     }
+
 
 
 

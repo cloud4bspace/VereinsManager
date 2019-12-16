@@ -148,11 +148,7 @@ public abstract class DatabaseOperation {
             preparedStmt.setInt(8, mitglied.getAnredeElement().getStatusElementKey());
             preparedStmt.setString(9, mitglied.getEintrittsdatum().toString());
             if (mitglied.getAustrittsDatum() != null) {
-                if (mitglied.getAustrittsDatum().isAfter(LocalDate.now())) {
-                    istMitglied = true;
-                } else {
-                    istMitglied = false;
-                }
+                istMitglied = mitglied.getAustrittsDatum().isAfter(LocalDate.now());
                 preparedStmt.setString(10, mitglied.getAustrittsDatum().toString());
             } else {
                 istMitglied = true;

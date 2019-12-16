@@ -31,7 +31,7 @@ public abstract class ExcelWriter extends Application {
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
         Window stage = new Stage();
         fileChooser.setTitle("Speichern unter..");
-        fileChooser.setInitialFileName("Mitgliederliste_" + LocalDate.now() + ".pdf");
+        fileChooser.setInitialFileName("Mitgliederliste_" + LocalDate.now() + ".xlsx");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Excel File", "*.xlsx"));
         File file = fileChooser.showSaveDialog(stage);
         System.out.println(file.getName());

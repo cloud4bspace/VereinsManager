@@ -3,7 +3,6 @@ package space.cloud4b.verein.daten.mysql.service;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.PieChart;
-import space.cloud4b.verein.services.connection.MysqlConnection;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.adressbuch.AdressBuch;
 import space.cloud4b.verein.model.verein.adressbuch.Kontakt;
@@ -13,10 +12,13 @@ import space.cloud4b.verein.model.verein.kalender.Termin;
 import space.cloud4b.verein.model.verein.kontrolle.rangliste.Position;
 import space.cloud4b.verein.model.verein.status.Status;
 import space.cloud4b.verein.model.verein.status.StatusElement;
+import space.cloud4b.verein.services.connection.MysqlConnection;
 
-import java.sql.*;
 import java.sql.Date;
-import java.time.*;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Year;
 import java.util.*;
 
 public abstract class DatenLieferant {
@@ -260,7 +262,6 @@ public abstract class DatenLieferant {
                 int alter = jahr - geburtsJahr;
                 geburtsDatum = jahr + geburtsDatum.substring(4,10);
                 System.out.println("GebdiesesJahr: " + geburtsDatum);
-                 ;
                 LocalDate geburtsDatumLD = Date.valueOf(geburtsDatum).toLocalDate();
                 // Wenn der nächste Geburtstag grösser ist als heute
 

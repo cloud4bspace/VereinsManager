@@ -1,5 +1,6 @@
 package space.cloud4b.verein.view.mitglieder;
 
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -32,9 +33,10 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class MitgliedViewController implements Observer {
-// Test Github
+    // Test Github  jjj
     private ArrayList<Observer> observerList;
     AdressController adressController;
+
     boolean unsavedChanges = false;
 
     @FXML
@@ -97,7 +99,7 @@ public class MitgliedViewController implements Observer {
 
     private Stage dialogStage;
     private MainFrameController mainFrameController;
-    private boolean okClicked = false; // TODO braucht es das?
+    private boolean okClicked = false; // TODO braucht es das noch?
     private MainApp mainApp;
     private Mitglied aktuellesMitglied = null;
     private ArrayList<Mitglied> mitgliedArrayList;

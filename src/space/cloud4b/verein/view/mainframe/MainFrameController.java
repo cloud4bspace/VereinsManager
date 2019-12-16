@@ -77,7 +77,7 @@ public class MainFrameController implements Observer {
 
     /**
      * Is called by the main application to give a reference back to itself.
-     *
+     *  jhj
      * @param mainApp
      */
     public void setMainApp(MainApp mainApp) {
@@ -164,6 +164,8 @@ public class MainFrameController implements Observer {
         iconTxt.setFill(Color.BLACK);
         javaDocMenuItem.setGraphic(iconTxt);
 
+
+
         titleLeftLabel.setText("Module");
         vMenuBarLeftContainer.setSpacing(10);
 
@@ -222,6 +224,13 @@ public class MainFrameController implements Observer {
         mainApp.getMainController().showDoodle();
     }
 
+    /**
+     * Oeffnet ein Browserfenster mit der Präsenzkontrolle
+     */
+    @FXML
+    private void handleKontrolle() {
+        mainApp.getMainController().showKontrolle();
+    }
 
     /**
      * Oeffnet ein Browserfenster mit der Präsenzkontrolle

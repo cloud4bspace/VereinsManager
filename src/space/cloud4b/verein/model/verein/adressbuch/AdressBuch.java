@@ -5,11 +5,9 @@ import javafx.collections.ObservableList;
 import space.cloud4b.verein.daten.mysql.service.DatenLieferant;
 import space.cloud4b.verein.model.verein.Verein;
 import space.cloud4b.verein.model.verein.status.Status;
-import space.cloud4b.verein.model.verein.status.StatusElement;
 import space.cloud4b.verein.services.DatabaseOperation;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class AdressBuch {
     private Verein verein;
@@ -35,7 +33,10 @@ public class AdressBuch {
     public ObservableList<Mitglied> getMitgliederListe() {
         return FXCollections.observableArrayList(mitgliederListe);
     }
-    public ArrayList<Mitglied> getMitgliederListeAsArrayList() { return mitgliederListe; };
+
+    public ArrayList<Mitglied> getMitgliederListeAsArrayList() {
+        return mitgliederListe;
+    }
 
     public Status getAnredeStatus() {
         return anredeStatus;

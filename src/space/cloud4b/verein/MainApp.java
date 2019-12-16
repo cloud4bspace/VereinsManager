@@ -16,6 +16,7 @@ import space.cloud4b.verein.model.verein.adressbuch.Mitglied;
 import space.cloud4b.verein.view.chart.BirthdayStatisticsController;
 import space.cloud4b.verein.view.chart.MemberStatistics01Controller;
 import space.cloud4b.verein.view.dashboard.DashBoardController;
+import space.cloud4b.verein.view.login.LoginController;
 import space.cloud4b.verein.view.mainframe.MainFrameController;
 import space.cloud4b.verein.view.mitglieder.MitgliedNeuViewController;
 import space.cloud4b.verein.view.mitglieder.MitgliedViewController;
@@ -45,8 +46,9 @@ public class MainApp extends Application {
         this.primaryStage.getIcons().add(new Image("file:ressources/images/address_book_32.png"));
         this.primaryStage.setMaximized(true);
         this.mainController = new MainController(this);
-        initMainFrame();
-        showDashboard();
+        initLogin();
+        // initMainFrame();
+        // showDashboard();
     }
 
     public void setMitgliedViewController(MitgliedViewController mitgliedViewController){
@@ -58,6 +60,36 @@ public class MainApp extends Application {
     }
 
     /**
+     * Initialisiert das Login-Fenster
+     */
+    public void initLogin() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/login/Login.fxml"));
+            AnchorPane page = loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Login");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            // Set the persons into the controller.
+            LoginController controller = loader.getController();
+            controller.setMainApp(this);
+            controller.setStage(dialogStage);
+            // controller.setPersonData(contactData);
+            //controller.setPersonData(verein.getAdressBuch().getMitgliederListe());
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    /**
      * Initialisiert das Hauptfenster
      */
     public void initMainFrame() {
@@ -66,7 +98,7 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class
                     .getResource("view/mainframe/MainFrame.fxml"));
-            mainFrame = (BorderPane) loader.load();
+            mainFrame = loader.load();
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(mainFrame);
@@ -79,7 +111,6 @@ public class MainApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
@@ -90,7 +121,7 @@ public class MainApp extends Application {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/dashboard/DashBoard.fxml"));
-            AnchorPane dashBoard = (AnchorPane) loader.load();
+            AnchorPane dashBoard = loader.load();
             dashBoard.setPadding(new Insets(10,10,10,10));
             // Set person overview into the center of root layout.
             mainFrame.setCenter(dashBoard);
@@ -112,7 +143,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/mitglieder/MitgliedView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();
@@ -144,7 +175,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/termine/TerminView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();
@@ -174,7 +205,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/chart/BirthdayStatistics.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Birthday Statistics");
             dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -201,7 +232,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/chart/MemberStatistics01.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Auswertung Mitglieder nach Kat I");
             dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -228,7 +259,7 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/mitglieder/MitgliedNeuView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+            AnchorPane page = loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Mitglied erfassen");
             dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -258,7 +289,9 @@ public class MainApp extends Application {
             // Load the fxml file and create a new stage for the popup.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/termine/TerminNeuView.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
+
+            AnchorPane page = loader.load();
+
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Termin erfassen");
             dialogStage.initModality(Modality.WINDOW_MODAL);
